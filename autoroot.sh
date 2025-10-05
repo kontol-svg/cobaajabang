@@ -66,6 +66,11 @@ declare -A EXPLOIT_LIST=(
     ["CVE-2021-40444"]="https://www.exploit-db.com/download/50048"
     ["CVE-2018-14634"]="https://www.exploit-db.com/download/45528"
     ["CVE-2022-27291"]="https://www.exploit-db.com/download/51341"
+    ["CVE-2025-32463"]="https://raw.githubusercontent.com/junxian428/CVE-2025-32463/refs/heads/main/priv_esc.sh"
+    ["CVE-2022-23222"]="https://raw.githubusercontent.com/tr3ee/CVE-2022-23222/refs/heads/master/exploit.c"
+    ["CVE-2025-32463"]="https://raw.githubusercontent.com/pr0v3rbs/CVE-2025-32463_chwoot/refs/heads/main/sudo-chwoot.sh"
+    ["CVE-2025-21756"]="https://raw.githubusercontent.com/hoefler02/CVE-2025-21756/refs/heads/main/x.c"
+    ["CVE-2025-32463"]="https://raw.githubusercontent.com/MohamedKarrab/CVE-2025-32463/refs/heads/main/get_root.sh"
 )
 
 # Check for required dependencies

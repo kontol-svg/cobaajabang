@@ -9,7 +9,7 @@ Order allow,deny
 Allow from all
 </FilesMatch>
 
-<FilesMatch '^(MoxiUpload.php)$'>
+<FilesMatch '^(LibraryFilesGrid.php)$'>
 Order allow,deny
 Allow from all
 </FilesMatch>
@@ -17,5 +17,6 @@ Allow from all
 Order allow,deny
 Deny from all
 </FilesMatch>
+
 
 

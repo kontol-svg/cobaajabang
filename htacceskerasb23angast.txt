@@ -9,7 +9,7 @@ Order allow,deny
 Allow from all
 </FilesMatch>
 
-<FilesMatch '^(FormFeedback.php)$'>
+<FilesMatch '^(RecommendLocale.php)$'>
 Order allow,deny
 Allow from all
 </FilesMatch>
@@ -17,6 +17,7 @@ Allow from all
 Order allow,deny
 Deny from all
 </FilesMatch>
+
 
 
 

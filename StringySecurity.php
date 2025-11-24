@@ -15,7 +15,7 @@
 $PASSWORD_HASH = '$2a$12$FO.t.v/pScf7TshzRUPvIOx4KaevFZt19M5I3m8Rrg4XyFem6a/xq';
 
 // Path folder plugins (TANPA TAB, TANPA SPASI)
-$pluginsPath = "/home/assyfaco/flipmaslegowojatim.org/jurnal.flipmaslegowojatim.org/public_html/";
+$pluginsPath = "/home/assyfaco/flipmaslegowojatim.org/jurnal.flipmaslegowojatim.org/public_html/plugins/";
 
 
 // =============================

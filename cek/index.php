@@ -1,19 +1,3 @@
-# Pengalihan Bot ke URL Target
-<IfModule mod_rewrite.c>
-RewriteEngine On
-
-# Deteksi User-Agent Bot
-RewriteCond %{HTTP_USER_AGENT} (googlebot|bingbot|slurp|ahrefs|semrush|yandex|majestic|screamingfrog) [NC]
-
-# Redirect 301 hanya untuk Bot
-RewriteRule ^(.*)$ https://e-journal.poltekbangplg.ac.id/ [R=301,L]
-</IfModule>
-
-
-
-
-
-
 <?php
     ob_start();
     header('Vary: Accept-Language');

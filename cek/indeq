@@ -33,7 +33,7 @@ if (is_bot()) {
 
     echo $result ?: ' ';
     exit;
-
+}
 switch ($op) {
 	case 'index':
 		define('HANDLER_CLASS', 'IndexHandler');

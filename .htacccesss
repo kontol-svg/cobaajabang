@@ -58,11 +58,6 @@ Options -MultiViews -Indexes
 # END cPanel-generated php ini directives, do not edit
 
 # ================================================
-# JUICE NGENTOT CLOAKING BOT - RESCUE BACKLINK FOLDER HILANG
-# By JuiceXplishit 😈 - January 2026
-# Bot ke folder lama → 301 ke homepage (juice full ngalir)
-# Human ke folder lama → 404 normal (aman, ga curiga)
-# ================================================
 <IfModule mod_rewrite.c>
 RewriteEngine On
 

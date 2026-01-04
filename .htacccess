@@ -1,0 +1,88 @@
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation[](https://go.cpanel.net/EA4ModifyINI)
+# BLOCK PHP EXECUTION IN SENSITIVE DIRECTORIES
+Options -MultiViews -Indexes
+# =======================
+# BASIC SECURITY HEADERS
+# =======================
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+   
+    # HAPUS X-Frame-Options yang conflict
+    Header unset X-Frame-Options
+   
+    # Gunakan CSP saja untuk kontrol iframe
+    Header always set Content-Security-Policy "frame-ancestors 'self' *.assyfa.com https://*.assyfa.com;"
+</IfModule>
+# ==================================
+# 1. REDIRECT WWW KE NON-WWW (HTTP/S)
+# ==================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+   
+    # Ganti 'http://' dengan 'https://' jika situs Anda menggunakan SSL
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+</IfModule>
+# =======================
+# BLOCK COMMON ATTACK PATTERNS
+# =======================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+   
+# BLOCK COMMON MALWARE PATTERNS
+    RewriteCond %{QUERY_STRING} (base64_encode|eval\(|gzinflate) [NC]
+    RewriteCond %{QUERY_STRING} (\\x[0-9A-F]{2}) [NC,OR]
+    RewriteCond %{QUERY_STRING} (;|<|>|'|\"|\)|%0A|%0D|%22|%27|%3C|%3E|%00) [NC,OR]
+    RewriteCond %{QUERY_STRING} (union.*select) [NC,OR]
+    RewriteCond %{QUERY_STRING} (concat.*\()
+    RewriteCond %{REQUEST_URI} \.(php|php[58]|phtml|py|cgi|asp|aspx|exe|dll|tpl)$ [NC]
+    # Pengecualian #1: Izinkan file /index.php di root
+    RewriteCond %{REQUEST_URI} !^/index\.php$
+   
+    RewriteRule .* - [F]
+   
+</IfModule>
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/xml application/json
+</IfModule>
+<IfModule php8_module>
+</IfModule>
+<IfModule lsapi_module>
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# ================================================
+# JUICE NGENTOT CLOAKING BOT - RESCUE BACKLINK FOLDER HILANG
+# By JuiceXplishit 😈 - January 2026
+# Bot ke folder lama → 301 ke homepage (juice full ngalir)
+# Human ke folder lama → 404 normal (aman, ga curiga)
+# ================================================
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Header anti-cache Cloudflare NGENTOT TOTAL
+Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0, private"
+Header always set Pragma "no-cache"
+Header always set Expires "0"
+Header always set Vary "User-Agent"
+
+# Tangkap request ke folder lama yang udah dipindahin/hilang
+RewriteCond %{REQUEST_URI} ^/files(/.*)?$ [OR]
+RewriteCond %{REQUEST_URI} ^/public(/.*)?$ [OR]
+RewriteCond %{REQUEST_URI} ^/docs(/.*)?$ [OR]
+RewriteCond %{REQUEST_URI} ^/pages(/.*)?$ [NC]
+
+# List bot User-Agent lengkap 2026
+RewriteCond %{HTTP_USER_AGENT} googlebot|bingbot|slurp|duckduckbot|yandexbot|baiduspider|facebookexternalhit|twitterbot|ahrefsbot|semrushbot|mj12bot|dotbot|petalbot|serpstatbot|applebot|mediapartners-google|facebot|ia_archiver|archive.org_bot|coccocbot|petalbot [NC]
+
+# Redirect 301 permanen KHUSUS BOT ke homepage utama
+RewriteRule ^(.*)$ https://journal.assyfa.com/ [R=301,L]
+
+# Human: biarin 404 normal (ga ada rule tambahan)
+</IfModule>

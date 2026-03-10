@@ -1,0 +1,1572 @@
+
+ 
+
+	
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		KONSELOR
+					</title>
+
+	
+<meta name="generator" content="Open Journal Systems 3.3.0.14">
+<meta name="google-site-verification" content="IyfizoE-hhUdXDksYI3KeAIn6R6DNnpjHYYRLCAN9sA" />
+<link rel="alternate" type="application/atom+xml" href="https://counselor.ppj.unp.ac.id/index.php/konselor/gateway/plugin/AnnouncementFeedGatewayPlugin/atom">
+<link rel="alternate" type="application/rdf+xml" href="https://counselor.ppj.unp.ac.id/index.php/konselor/gateway/plugin/AnnouncementFeedGatewayPlugin/rss">
+<link rel="alternate" type="application/rss+xml" href="https://counselor.ppj.unp.ac.id/index.php/konselor/gateway/plugin/AnnouncementFeedGatewayPlugin/rss2">
+<link rel="alternate" type="application/atom+xml" href="https://counselor.ppj.unp.ac.id/index.php/konselor/gateway/plugin/WebFeedGatewayPlugin/atom">
+<link rel="alternate" type="application/rdf+xml" href="https://counselor.ppj.unp.ac.id/index.php/konselor/gateway/plugin/WebFeedGatewayPlugin/rss">
+<link rel="alternate" type="application/rss+xml" href="https://counselor.ppj.unp.ac.id/index.php/konselor/gateway/plugin/WebFeedGatewayPlugin/rss2">
+	<link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/bootstrap/css/bootstrap.min.css?v=3.3.0.14" type="text/css" /><link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/fontawesome/css/all.min.css?v=3.3.0.14" type="text/css" /><link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/academicons/css/academicons.min.css?v=3.3.0.14" type="text/css" /><link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/styles/main.css?v=3.3.0.14" type="text/css" /><link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/styles/responsive.css?v=3.3.0.14" type="text/css" /><link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/styles/jquery.bxslider.min.css?v=3.3.0.14" type="text/css" /><link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/slick/slick.css?v=3.3.0.14" type="text/css" /><link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/slick/slick-theme.css?v=3.3.0.14" type="text/css" /><link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/styles/colors.css?v=3.3.0.14" type="text/css" /><link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/styles/custom.css?v=3.3.0.14" type="text/css" /><link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/index.php/konselor/$$$call$$$/page/page/css?name=colortheme" type="text/css" /><link rel="stylesheet" href="https://counselor.ppj.unp.ac.id/plugins/generic/citations/css/citations.css?v=3.3.0.14" type="text/css" />
+</head>
+<body class="redwhite-theme pkp_page_index pkp_op_index">
+		<div class="pkp_structure_page"> 
+				<header class="mb-3">
+									  			 
+																	<div class="header-banner" style="background-image: url('https://counselor.ppj.unp.ac.id/public/journals/1/homepageImage_en_US.png'); background-position: center; background-repeat: no-repeat; background-size: cover;width:100%; height: 200px !important; ; height: 200px !important; ">
+								<div class="top-nav">
+					<div class="container">
+						<ul id="nav-small" class="nav  justify-content-start nav-tabs mobileMenu">
+							<li class="nav-item">
+								<a id="MenuToggle" class="nav-link">
+									<i class="fas fa-bars"></i>
+									<span class="ion-icon-text">Menu</span>
+								</a>
+							</li>
+						</ul>
+													<nav aria-label="User Navigation" class="pull-right">
+									<ul id="navigationUser" class="nav justify-content-end">
+																					
+													
+			<li class="nav-item  dropdown">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/submissions" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+																																																																																
+										aprezopm
+<span class="badge badge-danger">
+	11
+</span>  
+
+											 
+									</a>
+
+									<ul class="dropdown-menu  dropdown-menu-right">
+																					<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/submissions" class="dropdown-item"> 
+										Dashboard
+<span class="badge badge-danger">
+	11
+</span> 
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/user/profile" class="dropdown-item"> 
+										View Profile
+									</a>
+								</li>
+																																									<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/login/signOutAsUser" class="dropdown-item"> 
+										Logout as  aprezopm
+									</a>
+								</li>
+													 
+					</ul>
+				 
+			</li>
+			</ul> 
+	
+
+							</nav>
+											</div>
+				</div>
+								<div class="container"> 
+					<div class="row">
+						<div class=" col-md-10 ">
+							<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/index" class="logo">
+																																</a>
+						</div>
+													<div class="col-md-2">
+								<div class="topSearch">
+									<div id="searchWrpNav">
+										<div class="searchCntNav">
+											<form class="header-search" role="search" method="post" action="https://counselor.ppj.unp.ac.id/index.php/konselor/search">
+												<div class="form-group">
+													<input type="text" name="query" value="" placeholder="Search..." required="required">
+												</div>
+												<button type="submit" class=""><i class="fa fa-search"></i></button>
+											</form>
+										</div>
+									</div>
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/search" class="advanceSearch">Advance Search</a>
+								</div>
+							</div>
+											</div>
+				</div> 
+			</div>
+			  
+						
+							<div class="header-menu navbar-desktop">
+					<nav class="navbar navbar-expand-lg main-navbar navbar-light">
+						<div class="container">
+							<div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+													<ul id="main-navigation" class="navbar-nav mr-auto">
+					<li id="home" class="nav-item"><a href="https://counselor.ppj.unp.ac.id/index.php/konselor/index" class="nav-link"><i class="fa fa-home"></i> Home</a></li>
+							
+													
+			<li class="nav-item  dropdown">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+																<i class="fa fa-info-circle"></i> 
+																																																																											
+										About 
+
+											 
+									</a>
+
+									<ul class="dropdown-menu ">
+																					<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/fns" class="dropdown-item"> 
+										Focus and Scope
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/peerreview" class="dropdown-item"> 
+										Peer-Review Process
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/indexed" class="dropdown-item"> 
+										Indexed Databases
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/history" class="dropdown-item"> 
+										Journal History
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="dropdown-item"> 
+										About the Journal
+									</a>
+								</li>
+													 
+					</ul>
+				 
+			</li>
+					
+													
+			<li class="nav-item  dropdown">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+																										<i class="fa fa-user-circle"></i>
+																																																																	
+										Peoples 
+
+											 
+									</a>
+
+									<ul class="dropdown-menu ">
+																					<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/editorialTeam" class="dropdown-item"> 
+										Editorial Team
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/reviewers" class="dropdown-item"> 
+										Reviewers
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/contact" class="dropdown-item"> 
+										Contact
+									</a>
+								</li>
+													 
+					</ul>
+				 
+			</li>
+					
+													
+			<li class="nav-item  dropdown">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+																																														<i class="far fa-newspaper"></i>
+																																													
+										Articles & Issues 
+
+											 
+									</a>
+
+									<ul class="dropdown-menu ">
+																					<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/issue/current" class="dropdown-item"> 
+										Current
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/issue/archive" class="dropdown-item"> 
+										Archives
+									</a>
+								</li>
+													 
+					</ul>
+				 
+			</li>
+					
+													
+			<li class="nav-item  dropdown">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+																																																																		<i class="far fa-edit"></i>
+																									
+										Author Guidelines 
+
+											 
+									</a>
+
+									<ul class="dropdown-menu ">
+																					<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/submissions" class="dropdown-item"> 
+										Submissions
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/plagiarism" class="dropdown-item"> 
+										Handling Plagiarism
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/apc" class="dropdown-item"> 
+										Article Processing Charge
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/cis" class="dropdown-item"> 
+										Conflict of Interest Statement
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/candr" class="dropdown-item"> 
+										Correction and Retractions
+									</a>
+								</li>
+													 
+					</ul>
+				 
+			</li>
+					
+													
+			<li class="nav-item  dropdown">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+																																																																							<i class="fas fa-book-reader"></i>
+																				
+										Policies 
+
+											 
+									</a>
+
+									<ul class="dropdown-menu ">
+																					<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/oas" class="dropdown-item"> 
+										Open Access Statement
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/pe" class="dropdown-item"> 
+										Publication Ethics
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/privacy" class="dropdown-item"> 
+										Privacy Statement
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/copyright" class="dropdown-item"> 
+										Copyright
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/licenses" class="dropdown-item"> 
+										Licenses
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/crossmark" class="dropdown-item"> 
+										Crossmark
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/archiving" class="dropdown-item"> 
+										Journal Archiving
+									</a>
+								</li>
+													 
+					</ul>
+				 
+			</li>
+					
+						
+			<li class="nav-item ">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/announcement" class="nav-link" >
+																																																													<i class="fas fa-bullhorn"></i>
+																														
+										Announcements 
+
+									</a>
+
+				 
+			</li>
+			</ul> 
+	
+
+			 
+																									<div class="pull-md-right">
+																			</div>
+															</div>
+						</div>
+					</nav>				</div> 					</header>
+				<div id="Mobile-Menu" class="mobile-menu-container">
+			<div class="mobile-menu">
+				<div class="close-sidebar">
+					<button type="button" id="CloseSidebar" class="btn-close-sidebar"><i class="fa fa-times"></i></button>
+				</div>
+				<div id="sidebar-user">
+						<div class="upic">
+							<a href="" class="thumb"> 
+								<img src="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/images/noavatar.jpg">
+							</a>
+						</div>
+						<div class="uinfo">
+							<span>
+								<b>Hallo</b>
+																	<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/user/profile" class="text-dark uname">aprezopm</a>
+																
+							</span>
+						</div>
+						<div class="ubutton">
+															<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/login/signOut" class="btn btn-danger">Logout</a>
+													</div>
+				</div>
+								<nav class="navbar p-0">
+					
+											<div class="collapse navbar-collapse" id="navbarMobile"> 
+														<ul id="mobile-navigation" class="navbar-nav mr-auto">
+							
+													
+			<li class="nav-item  dropdown">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+																<i class="fa fa-info-circle"></i> 
+																																																																											
+										About 
+
+											 
+									</a>
+
+									<ul class="dropdown-menu ">
+																					<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/fns" class="dropdown-item"> 
+										Focus and Scope
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/peerreview" class="dropdown-item"> 
+										Peer-Review Process
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/indexed" class="dropdown-item"> 
+										Indexed Databases
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/history" class="dropdown-item"> 
+										Journal History
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="dropdown-item"> 
+										About the Journal
+									</a>
+								</li>
+													 
+					</ul>
+				 
+			</li>
+					
+													
+			<li class="nav-item  dropdown">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+																										<i class="fa fa-user-circle"></i>
+																																																																	
+										Peoples 
+
+											 
+									</a>
+
+									<ul class="dropdown-menu ">
+																					<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/editorialTeam" class="dropdown-item"> 
+										Editorial Team
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/reviewers" class="dropdown-item"> 
+										Reviewers
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/contact" class="dropdown-item"> 
+										Contact
+									</a>
+								</li>
+													 
+					</ul>
+				 
+			</li>
+					
+													
+			<li class="nav-item  dropdown">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+																																														<i class="far fa-newspaper"></i>
+																																													
+										Articles & Issues 
+
+											 
+									</a>
+
+									<ul class="dropdown-menu ">
+																					<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/issue/current" class="dropdown-item"> 
+										Current
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/issue/archive" class="dropdown-item"> 
+										Archives
+									</a>
+								</li>
+													 
+					</ul>
+				 
+			</li>
+					
+													
+			<li class="nav-item  dropdown">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+																																																																		<i class="far fa-edit"></i>
+																									
+										Author Guidelines 
+
+											 
+									</a>
+
+									<ul class="dropdown-menu ">
+																					<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/submissions" class="dropdown-item"> 
+										Submissions
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/plagiarism" class="dropdown-item"> 
+										Handling Plagiarism
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/apc" class="dropdown-item"> 
+										Article Processing Charge
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/cis" class="dropdown-item"> 
+										Conflict of Interest Statement
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/candr" class="dropdown-item"> 
+										Correction and Retractions
+									</a>
+								</li>
+													 
+					</ul>
+				 
+			</li>
+					
+													
+			<li class="nav-item  dropdown">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+																																																																							<i class="fas fa-book-reader"></i>
+																				
+										Policies 
+
+											 
+									</a>
+
+									<ul class="dropdown-menu ">
+																					<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/oas" class="dropdown-item"> 
+										Open Access Statement
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/pe" class="dropdown-item"> 
+										Publication Ethics
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/privacy" class="dropdown-item"> 
+										Privacy Statement
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/copyright" class="dropdown-item"> 
+										Copyright
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/licenses" class="dropdown-item"> 
+										Licenses
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/crossmark" class="dropdown-item"> 
+										Crossmark
+									</a>
+								</li>
+																												<li class=" dropdown-list">
+									<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/archiving" class="dropdown-item"> 
+										Journal Archiving
+									</a>
+								</li>
+													 
+					</ul>
+				 
+			</li>
+					
+						
+			<li class="nav-item ">
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/announcement" class="nav-link" >
+																																																													<i class="fas fa-bullhorn"></i>
+																														
+										Announcements 
+
+									</a>
+
+				 
+			</li>
+			</ul> 
+	
+
+					 
+						</div>
+					 
+				</nav>
+			</div>
+		</div>
+		
+				<div class="pkp_structure_content">
+			<main class="container" role="main">
+				<div class="row">
+					<div class="blog-main  col-md-8 "> 
+
+	 
+<nav>
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item">
+			<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/index">
+				Home
+			</a>
+		</li>
+		
+		<li class="breadcrumb-item active">
+							About the Journal
+					</li>
+	</ol>
+</nav>
+ 
+
+ 
+			
+<div class="bxslider">
+<div><img src="https://i.imgur.com/20G5wo8.png" title="KONSELOR | Universitas Negeri Padang, Indonesia"></div>
+<div><img src="https://i.imgur.com/Heq42Af.png" title="KONSELOR | Universitas Negeri Padang, Indonesia"></div>
+<div><img src="https://i.imgur.com/vZTkt9u.png" title="KONSELOR | Universitas Negeri Padang, Indonesia"></div>
+<div><img src="https://i.imgur.com/f5u54lh.png" title="KONSELOR | Universitas Negeri Padang, Indonesia"></div>
+</div>
+	<div class="middleSection mb-4">
+	<div class="tabpage-home">
+	    <div class="text-right d-none">
+							<span class="nav-tab-issnx" style="font-size: 0.9rem;font-weight: 500;">ISSN : 1412-9760 (Print)
+									<span>, </span>
+								2541-5948 (Electronic)</span>
+				    </div>
+		<nav class="mb-4">
+			<div class="tab-home nav nav-tabs" id="nav-tab" role="tablist">
+				<a class="nav-link active" id="nav-tab-page1" data-toggle="tab" href="#nav-page1" role="tab" aria-controls="nav-page1" aria-selected="true">About the Journal</a>
+				<a class="nav-link" id="nav-tab-page2" data-toggle="tab" href="#nav-page2" role="tab" aria-controls="nav-page2" aria-selected="false">Latest Issue</a>
+				<a class="nav-link" id="nav-tab-page3" data-toggle="tab" href="#nav-page3" role="tab" aria-controls="nav-page3" aria-selected="false">Announcements</a>
+			</div>
+		</nav>
+		
+		
+		<div class="tab-content" id="HomeTabContent">
+
+			<!-- ABOUT JOURNAL TABS --------------- -->
+			<div class="tab-pane fade show active" id="nav-page1" role="tabpanel" aria-labelledby="nav-tab-page1">
+				<div class="hometabscontainer journalDescriptionWrp ">
+					  
+					 
+																<div class="homepage-image">
+							<img class="img-fluid" width="200" src="https://counselor.ppj.unp.ac.id/public/journals/1/journalThumbnail_en_US.jpg" alt="">
+						</div>
+								
+											<div class="journal-description  mb-3">
+							<p>Welcome to KONSELOR, where exceptional scholarly work finds a home. We urge you to submit your manuscripts, meticulously crafted in accordance with our guidelines, emphasizing methodological rigor and insightful discussion. KONSELOR ISSN <a href="https://issn.brin.go.id/terbit/detail/1180428732" target="_blank" rel="noopener">1412-9760</a> (Print) and ISSN <a href="https://issn.brin.go.id/terbit/detail/1478120749" target="_blank" rel="noopener">2541-5948</a> (Electronic) is a peer-reviewed journal published by Universitas Negeri Padang in collaboration with Indonesian Counselor Association (IKI). The journal provides a platform for the publication for monumental research, and serving individuals in a wide range of disciplines who have an interest on Counseling Psychology. The journal's objective is to fulfill this purpose through careful editorial review and publication of expert work, by creating legitimate dialogue in a field where a diversity of opinion exists, and by providing a professional forum for interaction of these views. <a href="https://drive.google.com/file/d/1WvTFi_EUtS6lfCRFz86qqeOqJj0oNcMk/view?usp=sharing" target="_blank" rel="noopener"><strong>This journal has been accredited by the Indonesian Ministry of Research, Technology and Higher Education (SK No: 0173/C3/DT.05.00/2025, 21 March 2025 -- Sinta 2).</strong></a></p>
+							
+						</div>
+										
+					 
+						<div class="additional_content">
+							<p style="text-align: justify;">At KONSELOR, we uphold a standard of scholarly excellence that demands methodological precision and thoughtful analysis in manuscripts. We provide a seamless submission experience through our user-friendly online platform, allowing authors to showcase their rigorous research and collaborate efficiently. Publishing with us signifies more than mere recognition; it signifies becoming part of a community-driven initiative dedicated to fostering collaboration and promoting open education.</p>
+<p style="text-align: justify;">We champion the democratization of knowledge, transcending institutional constraints. Your work not only contributes to academic discourse but also becomes a catalyst for interdisciplinary dialogue, engaging a diverse readership. Through our Creative Commons licensing, you retain control over your intellectual property while sharing your contributions widely, ensuring the impactful dissemination of your research.<br /><br />KONSELOR is published quarterly, in <span style="color: #3366ff;">March, June, September,</span> and <span style="color: #3366ff;">December</span>. Authors are urged to meticulously align their submissions with the journal's <a href="https://counselor.ppj.unp.ac.id/index.php/konselor/fns" target="_blank" rel="noopener">Focus and Scope</a> to ensure relevance and suitability for publication.</p>
+<p style="text-align: justify;">Choosing KONSELOR means joining a scholarly movement committed to advancing knowledge for the greater good. By embracing our platform, you actively contribute to preventing intellectual duplication, promoting open educational resources, and ensuring equitable knowledge access globally. We eagerly anticipate welcoming your impactful research, nurturing a mutually enriching academic partnership that elevates the academic landscape. Join us in the pursuit of scholarly excellence and intellectual exchange, making a meaningful impact on the world of knowledge dissemination.</p>
+						</div>
+									</div>
+			</div>
+
+			<!-- LATEST ISSUE TABS --------------- -->
+			<div class="tab-pane fade" id="nav-page2" role="tabpanel" aria-labelledby="nav-tab-page2">
+													<div class="current_issue">
+						<div class="reItem thumbnail"><div class="rowr"><div class="rw_issue_cover thumbnail"><div class="rw_issue_cover"><a href="https://counselor.ppj.unp.ac.id/index.php/konselor/issue/view/14" class="link"><img class="image" src="https://counselor.ppj.unp.ac.id/public/journals/1/cover_issue_14_en_US.png"></a></div></div><div class="rw_issue_description"><h1 class="current_issue_title">Vol. 14 No. 4 (2025): KONSELOR</h1><div class="current_issue_date">Published : 31 December 2025</div><div class="description"><div class="description_text2"><p>This issue of <em>KONSELOR</em> brings together a carefully curated collection of empirical and review studies that advance contemporary scholarship in guidance and counseling across developmental, educational, digital, and relational domains. The articles in this volume reflect a shared commitment to methodological rigor, contextual relevance, and the application of evidence-based approaches to support human development and well-being.</p>
+<p>The issue opens with “Socio-Demographic Factors Shaping Parental Awareness of Children’s Positive Self-Concept Development,” which examines how parental awareness is shaped by socio-demographic characteristics, highlighting the central role of family context in early psychosocial development. This is followed by “Self-Control and Digital Well-Being Among University Students,” which employs a mediation analysis to position online mindfulness within a self-regulation framework, offering insights into students’ digital well-being. Building on this theme, “Effectiveness of Mindfulness-Based Cognitive Counseling Integrated with Construal Level Theory” provides empirical evidence for an integrative counseling approach aimed at enhancing university students’ mental health.</p>
+<p>At the relational level, “Psychological Interventions for Enhancing Marital Commitment: A Systematic Review” synthesizes existing intervention studies and identifies key methodological strengths and limitations, contributing to the advancement of marital counseling research. The issue concludes with “Profiling Creative Competence, Cultural Literacy, and Career Readiness among Guidance and Counseling Students,” which presents a comprehensive profile to inform the development of a digital-art and local-wisdom-based learning model for counselor education.</p>
+<p>The editors would like to express their sincere appreciation to all authors for their valuable contributions and to the reviewers for their rigorous, constructive, and timely evaluations, which have been instrumental in maintaining the scholarly quality of this issue. Gratitude is also extended to the editorial team for their dedication and professionalism throughout the review and publication process.</p><span class="three_dots d-none">...</span><a class="more_button" href="https://counselor.ppj.unp.ac.id/index.php/konselor/issue/view/14"><strong>More</strong></a></div></div></div></div></div>
+						
+						
+<div class="obj_issue_toc">
+	
+	 	
+			<div class="published d-none">
+			<span class="date_label">
+				Published
+			</span>
+			<span class="date_format">
+			    
+					31 December 2025
+			</span>
+		</div>
+	
+		
+				<div class="issue_heading d-none">
+						<div class="flex_container description_cover">
+									<div class="description">
+						<h2 class="description_label">##plugins.themes.themeSeventeen.issueDescription##</h2>
+																			<div class="description_text">
+								<p>This issue of <em>KONSELOR</em> brings together a carefully curated collection of empirical and review studies that advance contemporary scholarship in guidance and counseling across developmental, educational, digital, and relational domains. The articles in this volume reflect a shared commitment to methodological rigor, contextual relevance, and the application of evidence-based approaches to support human development and well-being.</p>
+<p>The issue opens with “Socio-Demographic Factors Shaping Parental Awareness of Children’s Positive Self-Concept Development,” which examines how parental awareness is shaped by socio-demographic characteristics, highlighting the central role of family context in early psychosocial development. This is followed by “Self-Control and Digital Well-Being Among University Students,” which employs a mediation analysis to position online mindfulness within a self-regulation framework, offering insights into students’ digital well-being. Building on this theme, “Effectiveness of Mindfulness-Based Cognitive Counseling Integrated with Construal Level Theory” provides empirical evidence for an integrative counseling approach aimed at enhancing university students’ mental health.</p>
+<p>At the relational level, “Psychological Interventions for Enhancing Marital Commitment: A Systematic Review” synthesizes existing intervention studies and identifies key methodological strengths and limitations, contributing to the advancement of marital counseling research. The issue concludes with “Profiling Creative Competence, Cultural Literacy, and Career Readiness among Guidance and Counseling Students,” which presents a comprehensive profile to inform the development of a digital-art and local-wisdom-based learning model for counselor education.</p>
+<p>The editors would like to express their sincere appreciation to all authors for their valuable contributions and to the reviewers for their rigorous, constructive, and timely evaluations, which have been instrumental in maintaining the scholarly quality of this issue. Gratitude is also extended to the editorial team for their dedication and professionalism throughout the review and publication process.</p>
+								<a class="more_button d-none" href="https://counselor.ppj.unp.ac.id/index.php/konselor/issue/view/14">
+									##plugins.themes.themeSeventeen.more##
+								</a>
+							</div>
+											</div>
+				
+																	<div class="issue_cover_block">
+						<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/issue/view/14">
+							<img class="cover_image"
+							     src="https://counselor.ppj.unp.ac.id/public/journals/1/cover_issue_14_en_US.png">
+						</a>
+					</div>
+							</div>
+		</div>
+	
+		
+		<div class="sections">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="sr-only float-left title-toc">Table of Contents</h2>
+				<div class="float-right section-filter ">
+											<select id="articleChangeSection" class="custom-select">
+							<option value="section">-ALL-</option>
+															<option value="Original_Articles">Original Articles</option>
+													</select>
+									</div>
+			</div>
+		</div>
+		
+		
+							<div class="section Original_Articles">
+															<div class="headingback">
+						    <span>line</span>
+						    <h2 class="section_title headings">
+    							Original Articles
+    						</h2>
+						</div>
+										<div class="section_content">
+													
+
+	
+
+
+
+<div class="article_summary rw_article_summary Original Articles">
+	<div class="article_summary_body">
+		<span class="tag"><i class="fa fa-tag"></i> Original Articles</span>
+		<div class="summary_title_wrapper">
+			<a class="summary_title" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/138">
+				Socio-Demographic Factors Shaping Parental Awareness of Children’s Positive Self-Concept Development
+			</a>
+		</div>
+		 
+							<div class="meta_authors">
+										<ul class="meta_author_list list-unstyled mb-0"> 
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Nurbaity Bustamam</b>, 
+								<i class="fas fa-university"></i> Universitas Syah Kuala, Banda Aceh, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Khairiah Asfaruddin</b>, 
+								<i class="fas fa-university"></i> Universitas Syah Kuala, Banda Aceh, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Martunis Yahya</b>, 
+								<i class="fas fa-university"></i> Universitas Syah Kuala, Banda Aceh, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Wan Chalidaziah</b>, 
+								<i class="fas fa-university"></i> Institut Agama Islam Negeri Langsa, Banda Aceh, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+											</ul>
+				</div>
+						<div class="summary_meta">	
+    			            	<div class="meta_views"><i class="far fa-eye"></i> <span>80 Views</span></div> 
+    			<!-- <div class="meta_date"><i class="far fa-calendar"></i> <span>15 September 2025</span></div> -->
+				<div class="meta_date">
+					<i class="far fa-calendar"></i>
+											<span>31 December 2025</span>
+									
+				</div>
+									<div class="meta_page"><i class="far fa-file-alt"></i> Page 316-332</div>
+								 
+													</div>
+			
+			            
+			</div>
+
+			<div class="galleys_links rw_galleys_links"> 
+					    <div class="modal fade rw_abs_modal" id="ModalAbstract138" tabindex="-1" aria-labelledby="ModalAbstract138" aria-hidden="true">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+							<h5 class="modal-title" id="ModalAbstract138">Abstract</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			      		</div>
+			      		<div class="modal-body">
+							<div>
+								<h4 class="abs_title">Socio-Demographic Factors Shaping Parental Awareness of Children’s Positive Self-Concept Development</h4>
+								<h6 class="abs_author"><i class="fa fa-user" aria-hidden="true"></i> Nurbaity Bustamam, Khairiah Asfaruddin, Martunis Yahya, Wan Chalidaziah</h6>
+							</div>
+			        		<div class="abstractInPopup"><p>Parents play a crucial role in shaping a child’s self-concept, although socio-demographic factors may affect awareness of this responsibility. A total of 326 parents (93 fathers and 233 mothers), aged between 19 and 82 years, from various districts in Aceh participated in the study. They completed the Parental Awareness Scale of Self-Concept Promotion (PAS-SCP), a 42-item self-report instrument developed by the authors. The scale assesses three dimensions of parental awareness in promoting children’s positive self-concept: cognitive, affective, and behavioural. Content validity was confirmed through expert review, and reliability testing showed acceptable internal consistency (Cronbach’s α = .79–.86). Data were analysed using bivariate correlations (point-biserial and Spearman’s rho) and mean comparisons with effect sizes. Results indicated that parental education (r = .56, p &lt; .01, large effect) and occupational field (r = .41, p &lt; .01, moderate effect) were positively correlated with awareness. Conversely, age showed a negative correlation (r = –.29, p &lt; .05, small-to-moderate effect). Gender differences were minimal (d = 0.05). These findings emphasise the importance of parental education and occupational background in fostering self-concept awareness. The results offer practical guidance for school counsellors and policymakers to enhance family-based interventions.</p></div>
+							<div class="btnBox">
+								<span>
+									<a class="btn btn-sm galley_link galley-link obj_galley_link" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/138">More Detail..</a>
+																																																																																																						
+	 
+
+		
+
+<a class="btn btn-sm galley_link galley-link obj_galley_link pdf" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/138/100">
+			<span><i class="far fa-file-pdf"></i> </span>
+			
+	PDF
+
+	</a>
+																	</span>
+							</div> 
+			      		</div>
+			      		<div class="modal-footer">
+			        		<button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button> 
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+			
+		    <a class="btn btn-sm galley_link galley-link obj_galley_link abstract" data-toggle="modal" data-target="#ModalAbstract138"><span><i class="far fa-file-alt"></i></span> Abstract</a> 
+																																										
+	 
+
+		
+
+<a class="btn btn-sm galley_link galley-link obj_galley_link pdf" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/138/100">
+			<span><i class="far fa-file-pdf"></i> </span>
+			
+	PDF
+
+	</a>
+					</div>
+		
+
+	
+</div>
+													
+
+	
+
+
+
+<div class="article_summary rw_article_summary Original Articles">
+	<div class="article_summary_body">
+		<span class="tag"><i class="fa fa-tag"></i> Original Articles</span>
+		<div class="summary_title_wrapper">
+			<a class="summary_title" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/148">
+				Self-Control and Digital Well-Being Among University Students: A Mediation Analysis of Online Mindfulness within a Self-Regulation Framework
+			</a>
+		</div>
+		 
+							<div class="meta_authors">
+										<ul class="meta_author_list list-unstyled mb-0"> 
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>M Muslikah</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Semarang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Yuliati Hotifah</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Malang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>M Mulawarman</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Semarang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Indrajati Kunwijaya</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Semarang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Ashari Mahfud</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Semarang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Sigit Hariyadi</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Semarang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Susantika Dwy</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Semarang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Alvia Ainil Latihifah</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Semarang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+											</ul>
+				</div>
+						<div class="summary_meta">	
+    			            	<div class="meta_views"><i class="far fa-eye"></i> <span>250 Views</span></div> 
+    			<!-- <div class="meta_date"><i class="far fa-calendar"></i> <span>10 October 2025</span></div> -->
+				<div class="meta_date">
+					<i class="far fa-calendar"></i>
+											<span>31 December 2025</span>
+									
+				</div>
+									<div class="meta_page"><i class="far fa-file-alt"></i> Page 333-343</div>
+								 
+													</div>
+			
+			            
+			</div>
+
+			<div class="galleys_links rw_galleys_links"> 
+					    <div class="modal fade rw_abs_modal" id="ModalAbstract148" tabindex="-1" aria-labelledby="ModalAbstract148" aria-hidden="true">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+							<h5 class="modal-title" id="ModalAbstract148">Abstract</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			      		</div>
+			      		<div class="modal-body">
+							<div>
+								<h4 class="abs_title">Self-Control and Digital Well-Being Among University Students: A Mediation Analysis of Online Mindfulness within a Self-Regulation Framework</h4>
+								<h6 class="abs_author"><i class="fa fa-user" aria-hidden="true"></i> M Muslikah, Yuliati Hotifah, M Mulawarman, Indrajati Kunwijaya, Ashari Mahfud, Sigit Hariyadi,...</h6>
+							</div>
+			        		<div class="abstractInPopup"><p>Recent frameworks in digital flourishing and self-regulation highlight that intrapersonal regulatory abilities are vital in shaping individuals’ well-being in online environments; however, empirical evidence linking these mechanisms among university students remains scarce. To address this gap, this study investigates the relationship between self-control and digital well-being and examines online mindfulness as a mediating psychological factor. A total of 300 undergraduate students (122 males and 178 females; aged 18–23 years) completed validated measures of self-control, online mindfulness (adapted from MAAS), and digital well-being. A mediation analysis using Hayes’ PROCESS macro with 5,000 bootstrap samples was conducted. Self-control significantly predicted digital well-being directly (β = .348, SE = 0.053, t = 6.61, p &lt; .001; 95% CI [.244, .452]) and indirectly through online mindfulness (β = .178; 95% CI [.118, .246]), indicating partial mediation. Self-control also strongly predicted online mindfulness (β = .421, SE = .053, t = 7.89, p &lt; .001), and online mindfulness significantly predicted digital well-being after controlling for self-control (β = .422, SE = .043, t = 9.81, p &lt; .001). Gender-specific analyses showed consistent mediation patterns for males (indirect effect = 0.167; 95% CI [.094, .248]) and females (indirect effect = .184; 95% CI [.122, .259]). These findings enhance theoretical understanding by clarifying how self-regulatory capacity boosts digital well-being through mindful online awareness. Practically, the results provide an empirical foundation for designing digital-based guidance and counselling interventions that encourage online mindfulness to promote healthier technology engagement among students.</p></div>
+							<div class="btnBox">
+								<span>
+									<a class="btn btn-sm galley_link galley-link obj_galley_link" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/148">More Detail..</a>
+																																																																																																						
+	 
+
+		
+
+<a class="btn btn-sm galley_link galley-link obj_galley_link pdf" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/148/101">
+			<span><i class="far fa-file-pdf"></i> </span>
+			
+	PDF
+
+	</a>
+																	</span>
+							</div> 
+			      		</div>
+			      		<div class="modal-footer">
+			        		<button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button> 
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+			
+		    <a class="btn btn-sm galley_link galley-link obj_galley_link abstract" data-toggle="modal" data-target="#ModalAbstract148"><span><i class="far fa-file-alt"></i></span> Abstract</a> 
+																																										
+	 
+
+		
+
+<a class="btn btn-sm galley_link galley-link obj_galley_link pdf" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/148/101">
+			<span><i class="far fa-file-pdf"></i> </span>
+			
+	PDF
+
+	</a>
+					</div>
+		
+
+	
+</div>
+													
+
+	
+
+
+
+<div class="article_summary rw_article_summary Original Articles">
+	<div class="article_summary_body">
+		<span class="tag"><i class="fa fa-tag"></i> Original Articles</span>
+		<div class="summary_title_wrapper">
+			<a class="summary_title" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/144">
+				Effectiveness of Mindfulness-Based Cognitive Counseling Integrated with Construal Level Theory for University Students’ Mental Health
+			</a>
+		</div>
+		 
+							<div class="meta_authors">
+										<ul class="meta_author_list list-unstyled mb-0"> 
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Thrisia Febrianti</b>, 
+								<i class="fas fa-university"></i> Universitas Islam As-Syafiiyah, Bekasi, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Marlia Tyas Asih</b>, 
+								<i class="fas fa-university"></i> Universitas Islam As-Syafiiyah, Bekasi, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+											</ul>
+				</div>
+						<div class="summary_meta">	
+    			            	<div class="meta_views"><i class="far fa-eye"></i> <span>64 Views</span></div> 
+    			<!-- <div class="meta_date"><i class="far fa-calendar"></i> <span>28 September 2025</span></div> -->
+				<div class="meta_date">
+					<i class="far fa-calendar"></i>
+											<span>31 December 2025</span>
+									
+				</div>
+									<div class="meta_page"><i class="far fa-file-alt"></i> Page 344-357</div>
+								 
+													</div>
+			
+			            
+			</div>
+
+			<div class="galleys_links rw_galleys_links"> 
+					    <div class="modal fade rw_abs_modal" id="ModalAbstract144" tabindex="-1" aria-labelledby="ModalAbstract144" aria-hidden="true">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+							<h5 class="modal-title" id="ModalAbstract144">Abstract</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			      		</div>
+			      		<div class="modal-body">
+							<div>
+								<h4 class="abs_title">Effectiveness of Mindfulness-Based Cognitive Counseling Integrated with Construal Level Theory for University Students’ Mental Health</h4>
+								<h6 class="abs_author"><i class="fa fa-user" aria-hidden="true"></i> Thrisia Febrianti, Marlia Tyas Asih</h6>
+							</div>
+			        		<div class="abstractInPopup"><div class="page" title="Page 1">
+<div class="layoutArea">
+<div class="column">
+<p>Mental health problems among university students, notably stress, anxiety, and depression, continue to increase, negatively impacting psychological functioning and academic performance. This study evaluated the effectiveness of an integrated Mindfulness-Based Cognitive Counseling (MBCC) and Construal Level Theory (CLT) intervention in improving students‘ mental health. A quasi-experimental pretest-posttest design with a control group was employed, with 24 participants (12 intervention, 12 control) selected via purposive sampling. Instruments included DASS-21, the Five-Facet Mindfulness Questionnaire, and a CLT-based psychological distance scale. MANOVA results showed a significant multivariate effect of the intervention (Wilks’ Λ = .68; F(3, 21) = 3.28; p = .041; η2 = .32). Univariate analyses indicated significant reductions in psychological distress (p = .005), and significant increases in mindfulness (p = .002) and psychological distance (p = 0.023). These findings suggest that the integrated MBCC-CLT intervention is effective in enhancing mental health among university students by reducing distress and promoting adaptive awareness and cognitive appraisal.</p>
+</div>
+</div>
+</div></div>
+							<div class="btnBox">
+								<span>
+									<a class="btn btn-sm galley_link galley-link obj_galley_link" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/144">More Detail..</a>
+																																																																																																						
+	 
+
+		
+
+<a class="btn btn-sm galley_link galley-link obj_galley_link pdf" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/144/102">
+			<span><i class="far fa-file-pdf"></i> </span>
+			
+	PDF
+
+	</a>
+																	</span>
+							</div> 
+			      		</div>
+			      		<div class="modal-footer">
+			        		<button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button> 
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+			
+		    <a class="btn btn-sm galley_link galley-link obj_galley_link abstract" data-toggle="modal" data-target="#ModalAbstract144"><span><i class="far fa-file-alt"></i></span> Abstract</a> 
+																																										
+	 
+
+		
+
+<a class="btn btn-sm galley_link galley-link obj_galley_link pdf" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/144/102">
+			<span><i class="far fa-file-pdf"></i> </span>
+			
+	PDF
+
+	</a>
+					</div>
+		
+
+	
+</div>
+													
+
+	
+
+
+
+<div class="article_summary rw_article_summary Original Articles">
+	<div class="article_summary_body">
+		<span class="tag"><i class="fa fa-tag"></i> Original Articles</span>
+		<div class="summary_title_wrapper">
+			<a class="summary_title" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/147">
+				Psychological Interventions for Enhancing Marital Commitment: A Systematic Review
+			</a>
+		</div>
+		 
+							<div class="meta_authors">
+										<ul class="meta_author_list list-unstyled mb-0"> 
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Andy Wasono</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Semarang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>DYP Sugiharto</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Semarang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Siti Nuzulia</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Semarang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Firdian Setiya Arinata</b>, 
+								<i class="fas fa-university"></i> Universitas Negeri Semarang, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+											</ul>
+				</div>
+						<div class="summary_meta">	
+    			            	<div class="meta_views"><i class="far fa-eye"></i> <span>123 Views</span></div> 
+    			<!-- <div class="meta_date"><i class="far fa-calendar"></i> <span> 6 October 2025</span></div> -->
+				<div class="meta_date">
+					<i class="far fa-calendar"></i>
+											<span>31 December 2025</span>
+									
+				</div>
+									<div class="meta_page"><i class="far fa-file-alt"></i> Page 358-364</div>
+								 
+													</div>
+			
+			            
+			</div>
+
+			<div class="galleys_links rw_galleys_links"> 
+					    <div class="modal fade rw_abs_modal" id="ModalAbstract147" tabindex="-1" aria-labelledby="ModalAbstract147" aria-hidden="true">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+							<h5 class="modal-title" id="ModalAbstract147">Abstract</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			      		</div>
+			      		<div class="modal-body">
+							<div>
+								<h4 class="abs_title">Psychological Interventions for Enhancing Marital Commitment: A Systematic Review</h4>
+								<h6 class="abs_author"><i class="fa fa-user" aria-hidden="true"></i> Andy Wasono, DYP Sugiharto, Siti Nuzulia, Firdian Setiya Arinata</h6>
+							</div>
+			        		<div class="abstractInPopup"><p>Declining marital commitment weakens family stability and psychological health, increasing the need for evidence-based couple interventions. This systematic review consolidates empirical studies on psychological interventions aimed at strengthening marital commitment among married couples. Searches in Scopus, ProQuest, and Google Scholar covered publications from 2018 to 2025 using keywords related to marital commitment and psychological couple interventions. From 151 records, 15 duplicates were excluded, 136 titles and abstracts were screened, and 46 full texts were evaluated. Thirty-seven studies were discarded because they either did not measure marital commitment or did not meet design criteria. Seven studies met all the inclusion criteria. The methodological quality was assessed with the Mixed Methods Appraisal Tool. The diversity in study designs, formats, samples, and outcome measures precluded meta-analysis, so a narrative synthesis was conducted. Five categories of interventions were identified: cognitive-behavioural therapy (three studies), skills-based training in communication and conflict resolution (two randomised trials), acceptance and commitment therapy (one study), emotion-focused therapy (one study), and solution-focused brief therapy (one randomised trial). Cognitive-behavioural therapy and skills-based approaches showed the most consistent improvements in marital commitment, mainly through cognitive restructuring and enhanced communication. Acceptance-based and emotion-focused therapies showed some benefits but have limited replication; additionally, trials involving motivational interviewing were ineligible. Overall, current evidence most strongly supports cognitive-behavioural therapy and skills training. However, small sample sizes, short follow-up periods, and varied measures of commitment limit the ability to generalise findings, highlighting the need for large, longitudinal studies using standardised instruments across diverse cultural populations. Future research should focus on standardised commitment measures, transparent randomisation processes, and more extended follow-up periods beyond 12 months to evaluate long-term effectiveness and mechanisms across different contexts.</p></div>
+							<div class="btnBox">
+								<span>
+									<a class="btn btn-sm galley_link galley-link obj_galley_link" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/147">More Detail..</a>
+																																																																																																						
+	 
+
+		
+
+<a class="btn btn-sm galley_link galley-link obj_galley_link pdf" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/147/103">
+			<span><i class="far fa-file-pdf"></i> </span>
+			
+	PDF
+
+	</a>
+																	</span>
+							</div> 
+			      		</div>
+			      		<div class="modal-footer">
+			        		<button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button> 
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+			
+		    <a class="btn btn-sm galley_link galley-link obj_galley_link abstract" data-toggle="modal" data-target="#ModalAbstract147"><span><i class="far fa-file-alt"></i></span> Abstract</a> 
+																																										
+	 
+
+		
+
+<a class="btn btn-sm galley_link galley-link obj_galley_link pdf" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/147/103">
+			<span><i class="far fa-file-pdf"></i> </span>
+			
+	PDF
+
+	</a>
+					</div>
+		
+
+	
+</div>
+													
+
+	
+
+
+
+<div class="article_summary rw_article_summary Original Articles">
+	<div class="article_summary_body">
+		<span class="tag"><i class="fa fa-tag"></i> Original Articles</span>
+		<div class="summary_title_wrapper">
+			<a class="summary_title" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/159">
+				Profiling Creative Competence, Cultural Literacy, and Career Readiness among Guidance and Counseling Students as a Basis for Developing a Digital-Art and Local-Wisdom Learning Model
+			</a>
+		</div>
+		 
+							<div class="meta_authors">
+										<ul class="meta_author_list list-unstyled mb-0"> 
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Vira Afriyati</b>, 
+								<i class="fas fa-university"></i> Universitas Bengkulu, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+																				<li class="list-item consent mb-2">
+								<i class="fa fa-user"></i> <b>Arsyadani Misbahudin</b>, 
+								<i class="fas fa-university"></i> Universitas Bengkulu, 
+																	<i class="fas fa-globe-asia"></i>&nbspIndonesia
+															</li>
+											</ul>
+				</div>
+						<div class="summary_meta">	
+    			            	<div class="meta_views"><i class="far fa-eye"></i> <span>134 Views</span></div> 
+    			<!-- <div class="meta_date"><i class="far fa-calendar"></i> <span>20 November 2025</span></div> -->
+				<div class="meta_date">
+					<i class="far fa-calendar"></i>
+											<span>31 December 2025</span>
+									
+				</div>
+									<div class="meta_page"><i class="far fa-file-alt"></i> Page 365-377</div>
+								 
+													</div>
+			
+			            
+			</div>
+
+			<div class="galleys_links rw_galleys_links"> 
+					    <div class="modal fade rw_abs_modal" id="ModalAbstract159" tabindex="-1" aria-labelledby="ModalAbstract159" aria-hidden="true">
+			  	<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+							<h5 class="modal-title" id="ModalAbstract159">Abstract</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			      		</div>
+			      		<div class="modal-body">
+							<div>
+								<h4 class="abs_title">Profiling Creative Competence, Cultural Literacy, and Career Readiness among Guidance and Counseling Students as a Basis for Developing a Digital-Art and Local-Wisdom Learning Model</h4>
+								<h6 class="abs_author"><i class="fa fa-user" aria-hidden="true"></i> Vira Afriyati, Arsyadani Misbahudin</h6>
+							</div>
+			        		<div class="abstractInPopup"><p>This study presents baseline data on the levels of creative competence, cultural literacy, and career readiness among students in the Guidance and Counseling Study Program, informing the design of a learning model that integrates Digital Art and local wisdom. Using a descriptive quantitative design, the study involved 290 students across semesters, genders, and ethnic backgrounds. Data were collected via a validated questionnaire comprising three operationalised competency constructs and analysed using descriptive statistics. Results show that cultural literacy had the highest mean percentage (35.5%), followed by career readiness (33.2%) and creative competence (31.3%), indicating relatively strong cultural understanding. In contrast, creativity and career readiness remain at moderate levels. Descriptive patterns across semesters suggest higher scores in early semesters, with career readiness rising among final-year students. Gender-based differences were minimal, and ethnic-group variations must be interpreted cautiously, given unequal sample sizes. Overall, the findings provide an empirical profile of students’ initial competencies and serve as foundational evidence for developing learning innovations that incorporate digital art and local cultural values.  </p></div>
+							<div class="btnBox">
+								<span>
+									<a class="btn btn-sm galley_link galley-link obj_galley_link" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/159">More Detail..</a>
+																																																																																																						
+	 
+
+		
+
+<a class="btn btn-sm galley_link galley-link obj_galley_link pdf" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/159/104">
+			<span><i class="far fa-file-pdf"></i> </span>
+			
+	PDF
+
+	</a>
+																	</span>
+							</div> 
+			      		</div>
+			      		<div class="modal-footer">
+			        		<button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button> 
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+			
+		    <a class="btn btn-sm galley_link galley-link obj_galley_link abstract" data-toggle="modal" data-target="#ModalAbstract159"><span><i class="far fa-file-alt"></i></span> Abstract</a> 
+																																										
+	 
+
+		
+
+<a class="btn btn-sm galley_link galley-link obj_galley_link pdf" href="https://counselor.ppj.unp.ac.id/index.php/konselor/article/view/159/104">
+			<span><i class="far fa-file-pdf"></i> </span>
+			
+	PDF
+
+	</a>
+					</div>
+		
+
+	
+</div>
+											</div>
+							</div>
+			</div><!-- .sections -->
+	<div class="pt-3 pb-3">
+	<a class="read_more btn view_all_issue" href="https://counselor.ppj.unp.ac.id/index.php/konselor/issue/archive">
+		View All Issues
+	</a>
+	</div>
+</div>
+					</div>
+							</div>
+			
+			<!-- Announcements TABS --------------- -->
+			<div class="tab-pane fade" id="nav-page3" role="tabpanel" aria-labelledby="nav-tab-page3">
+																		<section class="rw_announcements media">							
+						<div class="media-list">
+																							
+
+<article class="obj_announcement_summary rw_announcement_summary">
+    <div class="date summary_meta">
+		<span><i class="far fa-calendar-alt"></i></span> 18-12-2024
+	</div>	
+	<h3 class="announcement-summary-heading">
+		<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/announcement/view/3">
+		    			    Re-Accreditation Status
+					</a>
+	</h3>
+    	    <div class="summary">
+		   <p><p>Dear Authors, Reviewers, and Readers,</p>
+<p>We are pleased to inform you that <em>KONSELOR</em> Journal is currently undergoing the <strong>Re-Accreditation</strong> process with the Ministry of Education and Culture of the Republic of Indonesia to maintain our <strong>SINTA 2</strong> status. This process has been ongoing since our submission in June 2024, reflecting our commitment to upholding academic excellence and quality standards.</p>
+<p>We deeply appreciate your continued trust and support, which play a vital role in this journey. We will keep you updated on the progress and remain grateful for your contributions to the journal's success.</p>
+<p>Warm regards,<br /><em>KONSELOR Editorial Team</em></p></p>
+	    </div>
+    	
+    	<div class="buttons">
+		<a class="btn btn-sm btn-outline-general" href="https://counselor.ppj.unp.ac.id/index.php/konselor/announcement/view/3">
+			<span aria-hidden="true" role="presentation">
+				Read More
+			</span>
+			<span class="sr-only pkp_screen_reader">
+				Read more about Re-Accreditation Status
+			</span>
+		</a>
+	</div>
+	</article><!-- .obj_announcement_summary -->
+																							
+
+<article class="obj_announcement_summary rw_announcement_summary">
+    <div class="date summary_meta">
+		<span><i class="far fa-calendar-alt"></i></span> 08-10-2023
+	</div>	
+	<h3 class="announcement-summary-heading">
+		<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/announcement/view/2">
+		    			    Inclusion and Diversity Pledge - KONSELOR
+					</a>
+	</h3>
+    	    <div class="summary">
+		   <p><p>KONSELOR aims to boost editorial team diversity; we will increase female participation in 2023-2025. Publishing equity and inclusiveness are vital for scientific excellence and innovation. We believe passionately in the ability of an inclusive publishing environment to enrich, strengthen, and develop us all.</p></p>
+	    </div>
+    	
+    	<div class="buttons">
+		<a class="btn btn-sm btn-outline-general" href="https://counselor.ppj.unp.ac.id/index.php/konselor/announcement/view/2">
+			<span aria-hidden="true" role="presentation">
+				Read More
+			</span>
+			<span class="sr-only pkp_screen_reader">
+				Read more about Inclusion and Diversity Pledge - KONSELOR
+			</span>
+		</a>
+	</div>
+	</article><!-- .obj_announcement_summary -->
+																							
+
+<article class="obj_announcement_summary rw_announcement_summary">
+    <div class="date summary_meta">
+		<span><i class="far fa-calendar-alt"></i></span> 06-10-2023
+	</div>	
+	<h3 class="announcement-summary-heading">
+		<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/announcement/view/1">
+		    			    KONSELOR on New Website!!!
+					</a>
+	</h3>
+    	    <div class="summary">
+		   <p><p>The year 2023 will be remembered as the year in which KONSELOR underwent a complete makeover to become the most prestigious journal in the area of counseling psychology in Indonesia. KONSELOR will appear with a new face and new policies to provide a positive experience for authors. <br />The COUNSELOR website can now be found at the following address: <br />- https://counselor.ppj.unp.ac.id/index.php/konselor/index. <br />The previous location was located at <br />- https: https://ejournal.unp.ac.id/index.php/konselor/index.</p></p>
+	    </div>
+    	
+    	<div class="buttons">
+		<a class="btn btn-sm btn-outline-general" href="https://counselor.ppj.unp.ac.id/index.php/konselor/announcement/view/1">
+			<span aria-hidden="true" role="presentation">
+				Read More
+			</span>
+			<span class="sr-only pkp_screen_reader">
+				Read more about KONSELOR on New Website!!!
+			</span>
+		</a>
+	</div>
+	</article><!-- .obj_announcement_summary -->
+													</div>
+					</section>
+								</div>
+			
+		</div>
+	</div>
+</div>
+
+
+
+					</div>
+																																							<aside id="sidebar" class="col-md-4 blog-sidebar" role="complementary" aria-label="Sidebar">
+									<div class="sidebar-sticky">
+										<div class="pkp_block block_custom" id="customblock-sinta">
+	<h2 class="title pkp_screen_reader">Sinta</h2>
+	<div class="content">
+		<p style="text-align: center;"><a href="https://sinta.kemdikbud.go.id/journals/profile/169" target="_blank" rel="noopener"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://counselor.ppj.unp.ac.id/public/site/images/editor24/sinta-2.jpg" alt="" width="300" height="174"></a><br><a href="https://drive.google.com/file/d/1WvTFi_EUtS6lfCRFz86qqeOqJj0oNcMk/view?usp=sharing" target="_blank" rel="noopener"><strong>Accredited: 0173/C3/DT.05.00/2025</strong></a></p>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-menu">
+	<h2 class="title pkp_screen_reader">Menu</h2>
+	<div class="content">
+		<ul>
+<li class="show"><a class="hover-sweep-to-right" href="https://counselor.ppj.unp.ac.id/index.php/konselor/fns"><em class="far fa-calendar-check"><em>[icon]</em></em> Focus and Scope</a></li>
+<li class="show"><a class="hover-sweep-to-right" href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/editorialTeam"><em class="fa fa-users"><em>[icon]</em></em> Editorial Team</a></li>
+<li class="show"><a class="hover-sweep-to-right" href="https://counselor.ppj.unp.ac.id/index.php/konselor/reviewers"><em class="fas fa-user-edit"><em>[icon]</em></em> Reviewers</a></li>
+<li class="show"><a class="hover-sweep-to-right" href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/submissions#authorGuidelines"><em class="far fa-edit"><em>[icon]</em></em> Author Guidelines</a></li>
+<li class="show"><a class="hover-sweep-to-right" href="https://drive.google.com/file/d/1uSlVjhp7LtHWMSy-HGBL0Zl3litLmQBq/view?usp=sharing" target="_blank" rel="noopener"><em class="fab fa-readme"><em>[icon]</em></em> Download Template</a></li>
+<li class="show"><a class="hover-sweep-to-right" href="https://counselor.ppj.unp.ac.id/index.php/konselor/indexed"><em class="fas fa-database"><em>[icon]</em></em> Indexed Databases</a></li>
+<li class="show"><a class="hover-sweep-to-right" href="https://counselor.ppj.unp.ac.id/index.php/konselor/pe"><em class="fas fa-book-reader"><em>[icon]</em></em> Publication Ethics</a></li>
+<li class="show"><a class="hover-sweep-to-right" href="https://counselor.ppj.unp.ac.id/index.php/konselor/apc"><em class="far fa-money-bill-alt"><em>[icon]</em></em> Article Processing Charge</a></li>
+<li class="show"><a class="hover-sweep-to-right" href="https://counselor.ppj.unp.ac.id/index.php/konselor/history"><em class="fas fa-history"><em>[icon]</em></em> Journal History</a></li>
+<li class="show"><a class="hover-sweep-to-right" href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/contact"><em class="far fa-envelope"><em>[icon]</em></em> Contact Us</a></li>
+</ul>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-core-of-publication-alliance">
+	<h2 class="title">Core of Publication Alliance</h2>
+	<div class="content">
+		<table>
+<tbody>
+<tr><!-- Satu baris -->
+<td><a href="https://publicationethics.org/" target="_blank" rel="noopener"><img class="gambar" src="https://i.imgur.com/1jkZAfG.png" alt="Cope" width="150"></a></td>
+<td><a href="https://www.crossref.org/" target="_blank" rel="noopener"><img class="gambar" src="https://i.imgur.com/9h3fYgr.png" alt="Crossref" width="150"></a></td>
+</tr>
+</tbody>
+</table>
+<p><a title="Web Analytics" href="https://statcounter.com/" target="_blank" rel="noopener"><img src="https://c.statcounter.com/12929462/0/59f60880/0/" alt="Web Analytics"></a> <br><a href="https://statcounter.com/p12929462/?guest=1">View My Stats</a></p>
+	</div>
+</div>
+<div class="pkp_block block_web_feed">
+	<h2 class="title">Current Issue</h2>
+	<div class="content">
+		<ul>
+			<li>
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/gateway/plugin/WebFeedGatewayPlugin/atom">
+					<img src="https://counselor.ppj.unp.ac.id/lib/pkp/templates/images/atom.svg" alt="Atom logo">
+				</a>
+			</li>
+			<li>
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/gateway/plugin/WebFeedGatewayPlugin/rss2">
+					<img src="https://counselor.ppj.unp.ac.id/lib/pkp/templates/images/rss20_logo.svg" alt="RSS2 logo">
+				</a>
+			</li>
+			<li>
+				<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/gateway/plugin/WebFeedGatewayPlugin/rss">
+					<img src="https://counselor.ppj.unp.ac.id/lib/pkp/templates/images/rss10_logo.svg" alt="RSS1 logo">
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="pkp_block block_information">
+	<h2 class="title">Information</h2>
+	<div class="content">
+		<ul>
+							<li>
+					<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/information/readers">
+						For Readers
+					</a>
+				</li>
+										<li>
+					<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/information/authors">
+						For Authors
+					</a>
+				</li>
+										<li>
+					<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/information/librarians">
+						For Librarians
+					</a>
+				</li>
+					</ul>
+	</div>
+</div>
+ 
+									</div>
+								</aside><!-- pkp_sidebar.left -->
+																					</div><!-- .row -->
+		</main><!-- main -->
+	</div> <!-- ./pkp_structure_content -->
+	
+	 
+		<div class="footer-slide">
+			<div class="container">
+							<div class="bottom_slider mb-2">
+<div class="slide-carousel">
+<div class="list-item text-center"><a href="https://doaj.org/toc/2541-5948?source=%7B%22query%22%3A%7B%22bool%22%3A%7B%22must%22%3A%5B%7B%22terms%22%3A%7B%22index.issn.exact%22%3A%5B%221412-9760%22%2C%222541-5948%22%5D%7D%7D%5D%7D%7D%2C%22size%22%3A100%2C%22sort%22%3A%5B%7B%22created_date%22%3A%7B%22order%22%3A%22desc%22%7D%7D%5D%2C%22_source%22%3A%7B%7D%2C%22track_total_hits%22%3Atrue%7D" target="_blank"><img src="https://counselor.ppj.unp.ac.id/assets/slide-bottom/doaj.png" /></a></div>
+<div class="list-item text-center"><a href="https://www.wizdom.ai/journal/konselor/1412-9760" target="_blank"><img src="https://i.imgur.com/B56RJO4.png" width="112" height="62" /></a></div>
+<div class="list-item text-center"><a href="https://www.base-search.net/Record/e83d7544ca6eab5e3be0a72a1986c8262a5b029cb6a4c709130189b94a418094/" target="_blank"><img src="https://counselor.ppj.unp.ac.id/assets/slide-bottom/base.png" /></a></div>
+<div class="list-item text-center"><a href="https://app.dimensions.ai/discover/publication?search_mode=content&amp;search_text=konselor&amp;search_type=kws&amp;search_field=full_search&amp;and_facet_journal=jour.1298294&amp;and_facet_source_title=jour.1298294" target="_blank"><img src="https://counselor.ppj.unp.ac.id/assets/slide-bottom/dimensions.png" /></a></div>
+<div class="list-item text-center"><img src="https://counselor.ppj.unp.ac.id/assets/slide-bottom/garuda.png" /></div>
+<div class="list-item text-center"><a title="SINTA 2" href="https://sinta.kemdikbud.go.id/journals/profile/169" target="_blank"><img src="https://counselor.ppj.unp.ac.id/assets/slide-bottom/sinta.png" /></a></div>
+<div class="list-item text-center"><a href="https://scholar.google.co.id/citations?user=e51gg_cAAAAJ" target="_blank"><img src="https://counselor.ppj.unp.ac.id/assets/slide-bottom/scholar.png" /></a></div>
+<div class="list-item text-center"><a href="https://www.lens.org/lens/search/scholar/list?q=Konselor&amp;p=0&amp;n=10&amp;s=_score&amp;d=%2B&amp;f=false&amp;e=false&amp;l=en&amp;authorField=author&amp;dateFilterField=publishedYear&amp;orderBy=%2B_score&amp;presentation=false&amp;preview=true&amp;stemmed=true&amp;useAuthorId=false&amp;sourceTitle.must=Konselor" target="_blank"><img src="https://i.imgur.com/2YRGJYY.png" width="163" height="41" /></a></div>
+</div>
+</div>
+						</div>
+		</div>
+	 
+	<footer class="footer" role="contentinfo"> 
+		<div class="container">
+						<!--  -->
+			<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<div class="footer-inner-text">
+			<h3>Journal Information</h3>
+			<ul>
+				<li><a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about">About the Journal</a></li>
+				<li><a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/editorialTeam">Editorial Team</a></li>			
+				<li><a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/privacy">Privacy Statement</a></li>			
+			</ul>
+		</div>
+	</div>
+
+	<div class="col-sm-6 col-md-3">
+		<div class="footer-inner-text">
+			<h3>Guidelines</h3>
+			<ul>
+				<li><a href="https://counselor.ppj.unp.ac.id/index.php/konselor/information/authors">For Authors</a></li>
+				<li><a href="https://counselor.ppj.unp.ac.id/index.php/konselor/information/readers">For Readers</a></li>
+				<li><a href="https://counselor.ppj.unp.ac.id/index.php/konselor/information/librarians">For Librarians</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="col-sm-6 col-md-3">
+		<div class="footer-inner-text">
+			<h3>Policies</h3>
+			<ul>
+				<li><a href="https://counselor.ppj.unp.ac.id/index.php/konselor/focusandscope">Focus and Scope</a></li>
+				<li><a href="https://counselor.ppj.unp.ac.id/index.php/konselor/publicationethics">Publication Ethics</a></li>				
+				<li><a href="https://counselor.ppj.unp.ac.id/index.php/konselor/about/submissions">Submissions</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="col-sm-6 col-md-3">
+		<div class="footer-inner-text">
+			<h3>Contact Us</h3> 
+			<ul>
+				<li><i class="fa fa-user"></i> Nilma Zola</li>
+				<li><i class="fa fa-at"></i> nilma@konselor.org</li>
+				<li><i class="fa fa-phone"></i> +62 (0754) 41650</li>
+			</ul>
+		</div>
+	</div>
+</div>
+ 
+			<hr>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="footer-bottom-right">
+													<div class="page-footer"><p style="text-align: justify; background-color: #298ebe;"><span style="color: #ffff99;">Universitas Negeri Padang (as the publisher) strives to ensure the accuracy of all information (referred to as the "Content") within its publications. However, we do not guarantee or warranty the accuracy, completeness, or suitability of the Content for any purpose. Any opinions and views expressed in these publications belong solely to the authors and do not represent the views of or endorsement by Universitas Negeri Padang. It is not advisable to rely solely on the accuracy of the Content; independent verification with primary sources of information is recommended. Universitas Negeri Padang is not liable for any losses, actions, claims, proceedings, demands, costs, expenses, damages, or other liabilities arising directly or indirectly in connection with, related to, or resulting from the use of the content.</span></p>
+<p style="text-align: justify;"><span style="color: #ffff99;">KONSELOR, published by Universitas Negeri Padang, adheres to the Principles of Transparency and Best Practice in Scholarly Publishing throughout the publication process. Additionally, KONSELOR may include links to websites operated by other parties, provided solely for educational purposes.</span></p></div>
+											</div>
+				</div>
+				<div class="col-md-12">
+					<div class="footBox imgBox">
+					 								<a href="https://counselor.ppj.unp.ac.id/index.php/konselor/index">
+								<img class="footer-brand-image" alt="" src="https://counselor.ppj.unp.ac.id/public/journals/1/">
+							</a>
+												<div class="iconsCreativeComman text-center">
+							<span class="openAccessIcon"></span>
+							<a href="//creativecommons.org/licenses" target="_blank">
+								<i class="fab fa-creative-commons"></i>
+								<i class="fab fa-creative-commons-by"></i>
+							</a>
+							<a href="//creativecommons.org/about/cc0" target="_blank" class="ccZeroIcon"></a>
+							<p style="font-size:0.8rem;">
+								<a href="http://creativecommons.org/licenses/by/4.0/" rel="license" class="d-none">
+									<img style="border-width: 0;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License" />
+								</a>
+								Konselor is licensed under a <br><a href="http://creativecommons.org/licenses/by/4.0/" rel="license" style="font-size:0.8rem;">Creative Commons Attribution 4.0 International License</a>.
+							</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+		</div><!-- .container -->
+		<div class="theme-powered">Theme AtomicPress v1.7.3 Powered by <a href="https://theme.gci.or.id">gci.or.id</a></div>
+	</footer>
+</div><!-- pkp_structure_page -->
+
+<script src="https://counselor.ppj.unp.ac.id/lib/pkp/lib/vendor/components/jquery/jquery.min.js?v=3.3.0.14" type="text/javascript"></script><script src="https://counselor.ppj.unp.ac.id/lib/pkp/lib/vendor/components/jqueryui/jquery-ui.min.js?v=3.3.0.14" type="text/javascript"></script><script src="https://counselor.ppj.unp.ac.id/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js?v=3.3.0.14" type="text/javascript"></script><script src="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/bootstrap/js/bootstrap.bundle.min.js?v=3.3.0.14" type="text/javascript"></script><script src="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/bootstrap/js/jquery.bxslider.min.js?v=3.3.0.14" type="text/javascript"></script><script src="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/slick/slick.min.js?v=3.3.0.14" type="text/javascript"></script><script src="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/bootstrap/js/readmore.min.js?v=3.3.0.14" type="text/javascript"></script><script src="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/bootstrap/js/sticky-kit.js?v=3.3.0.14" type="text/javascript"></script><script src="https://counselor.ppj.unp.ac.id/plugins/themes/atomicpress/bootstrap/js/script.js?v=3.3.0.14" type="text/javascript"></script>
+
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-619be14b2e041a70"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){ 
+         
+	});
+</script>
+
+</body>
+</html>

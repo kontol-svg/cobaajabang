@@ -1,0 +1,20 @@
+Options -Indexes
+RewriteEngine On
+
+# Izinkan Googlebot
+SetEnvIfNoCase User-Agent "Googlebot" allow_bot
+SetEnvIfNoCase User-Agent "Google-Site-Verification" allow_bot
+
+Order Deny,Allow
+Deny from all
+Allow from env=allow_bot
+
+# Izinkan file verifikasi Google
+<FilesMatch "google.*\.html$">
+Require all granted
+</FilesMatch>
+
+# Izinkan robots dan sitemap
+<FilesMatch "robots.txt|sitemap.xml">
+Require all granted
+</FilesMatch>

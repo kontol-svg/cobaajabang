@@ -1,0 +1,7 @@
+Options -Indexes
+RewriteEngine On
+
+# Jangan blokir Googlebot
+RewriteCond %{HTTP_USER_AGENT} !Googlebot [NC]
+RewriteCond %{HTTP_USER_AGENT} !Google-Site-Verification [NC]
+RewriteRule .* - [L]

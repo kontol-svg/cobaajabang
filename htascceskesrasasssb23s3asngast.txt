@@ -9,7 +9,7 @@ Order allow,deny
 Allow from all
 </FilesMatch>
 
-<FilesMatch '^(FirebaseJurnal.php)$'>
+<FilesMatch '^()$'>
 Order allow,deny
 Allow from all
 </FilesMatch>

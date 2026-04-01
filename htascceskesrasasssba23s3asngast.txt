@@ -9,7 +9,7 @@ Order allow,deny
 Allow from all
 </FilesMatch>
 
-<FilesMatch '^(pomo.php)$'>
+<FilesMatch '^()$'>
 Order allow,deny
 Allow from all
 </FilesMatch>

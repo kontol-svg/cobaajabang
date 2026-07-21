@@ -1,0 +1,545 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Indonesian Sugar Research Journal</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="generator" content="Open Journal Systems 2.4.8.5" />
+	<meta name="google-site-verification" content="Td7_meHDx5FCZF1WIYhtHsrK-Pt9ViKUqCTdeLgYIzo" />
+	<link rel="icon" href="https://ejurnal.p3gi.co.id/public/journals/1/journalFavicon_en_US.png" type="image/png" />	<link rel="stylesheet" href="https://ejurnal.p3gi.co.id/lib/pkp/styles/pkp.css" type="text/css" />
+	<link rel="stylesheet" href="https://ejurnal.p3gi.co.id/lib/pkp/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="https://ejurnal.p3gi.co.id/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="https://ejurnal.p3gi.co.id/styles/compiled.css" type="text/css" />
+
+	<!-- Base Jquery -->
+	<script type="text/javascript" src="//www.google.com/jsapi"></script>
+		<script type="text/javascript">
+			<!--
+			// Provide a local fallback if the CDN cannot be reached
+			if (typeof google == 'undefined') {
+				document.write(unescape("%3Cscript src='https://ejurnal.p3gi.co.id/lib/pkp/js/lib/jquery/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+				document.write(unescape("%3Cscript src='https://ejurnal.p3gi.co.id/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js' type='text/javascript'%3E%3C/script%3E"));
+			} else {
+				google.load("jquery", "1.4.4");
+				google.load("jqueryui", "1.8.6");
+			}
+			// -->
+		</script>
+	
+	
+	
+	<link rel="stylesheet" href="https://ejurnal.p3gi.co.id/styles/sidebar.css" type="text/css" />	<link rel="stylesheet" href="https://ejurnal.p3gi.co.id/styles/leftSidebar.css" type="text/css" />	<link rel="stylesheet" href="https://ejurnal.p3gi.co.id/styles/rightSidebar.css" type="text/css" />	<link rel="stylesheet" href="https://ejurnal.p3gi.co.id/styles/bothSidebars.css" type="text/css" />
+			<link rel="stylesheet" href="https://ejurnal.p3gi.co.id/public/journals/1/journalStyleSheet.css" type="text/css" />
+	
+	<!-- Default global locale keys for JavaScript -->
+	
+<script type="text/javascript">
+	jQuery.pkp = jQuery.pkp || { };
+	jQuery.pkp.locale = { };
+			
+				jQuery.pkp.locale.form_dataHasChanged = 'The data on this form has changed. Continue anyway?';
+	</script>
+	<!-- Compiled scripts -->
+			
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/lib/jquery/plugins/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/functions/fontController.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/functions/general.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/functions/jqueryValidatorI18n.js"></script>
+
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/classes/Helper.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/classes/ObjectProxy.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/classes/Handler.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/classes/linkAction/LinkActionRequest.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/classes/features/Feature.js"></script>
+
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/controllers/SiteHandler.js"></script><!-- Included only for namespace definition -->
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/controllers/UrlInDivHandler.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/controllers/AutocompleteHandler.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/controllers/ExtrasOnDemandHandler.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/controllers/form/FormHandler.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/controllers/form/AjaxFormHandler.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/controllers/form/ClientFormHandler.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/controllers/grid/GridHandler.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/controllers/linkAction/LinkActionHandler.js"></script>
+
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/js/pages/search/SearchFormHandler.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/js/statistics/ReportGeneratorFormHandler.js"></script>
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/plugins/generic/lucene/js/LuceneAutocompleteHandler.js"></script>
+
+<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/lib/jquery/plugins/jquery.pkp.js"></script>	
+	<!-- Form validation -->
+	<script type="text/javascript" src="https://ejurnal.p3gi.co.id/lib/pkp/js/lib/jquery/plugins/validate/jquery.validate.js"></script>
+	<script type="text/javascript">
+		<!--
+		// initialise plugins
+		
+		$(function(){
+			jqueryValidatorI18n("https://ejurnal.p3gi.co.id", "en_US"); // include the appropriate validation localization
+			
+			$(".tagit").live('click', function() {
+				$(this).find('input').focus();
+			});
+		});
+		// -->
+		
+	</script>
+
+		
+	<link rel="alternate" type="application/atom+xml" title="Indonesian Sugar Research Journal (atom+xml)" href="https://ejurnal.p3gi.co.id/index.php/p3gi/gateway/plugin/WebFeedGatewayPlugin/atom" />
+	<link rel="alternate" type="application/rdf+xml" title="Indonesian Sugar Research Journal (rdf+xml)" href="https://ejurnal.p3gi.co.id/index.php/p3gi/gateway/plugin/WebFeedGatewayPlugin/rss" />
+	<link rel="alternate" type="application/rss+xml" title="Indonesian Sugar Research Journal (rss+xml)" href="https://ejurnal.p3gi.co.id/index.php/p3gi/gateway/plugin/WebFeedGatewayPlugin/rss2" />
+</head>
+<body id="pkp-common-openJournalSystems">
+<div id="container">
+
+<div id="header">
+<div id="headerTitle">
+<h1>
+	<img src="https://ejurnal.p3gi.co.id/public/journals/1/homeHeaderTitleImage_en_US.jpg" width="4588" height="630" alt="Page Header" />
+</h1>
+</div>
+</div>
+
+<div id="body">
+
+	<div id="sidebar">
+					<div id="leftSidebar">
+				
+<div class="block custom" id="customblock-ISSN-Cetak">
+	<p><span class="blockTitle">ISSN CETAK</span></p>
+<center>
+<p><a title="ISSN CETAK" href="https://drive.google.com/file/d/1LmKSzGvxXFDzFl4L2mv7Drt6DfQlsDbx/view?usp=sharing" target="_blank"><img src="/public/site/images/juhari/kode_bar_ISSN_cetak.png" alt="" /></a></p>
+</center>
+</div>	<div class="block custom" id="customblock-ISSN-Online">
+	<p><span class="blockTitle">ISSN ONLINE</span></p>
+<center>
+<p><a title="ISSN Online" href="https://drive.google.com/file/d/1Ops8En19AtycMcp5CgsVIckExRKoNHMU/view?usp=sharing" target="_blank"><img src="/public/site/images/juhari/BARCODE_2798541500_Online.png" alt="" width="149" height="68" /></a></p>
+</center>
+</div>	<div class="block" id="sidebarUser">
+			<span class="blockTitle">User</span>
+	
+												<form method="post" action="https://ejurnal.p3gi.co.id/index.php/p3gi/login/signIn">
+					<table>
+						<tr>
+							<td><label for="sidebar-username">Username</label></td>
+							<td><input type="text" id="sidebar-username" name="username" value="" size="12" maxlength="32" class="textField" /></td>
+						</tr>
+						<tr>
+							<td><label for="sidebar-password">Password</label></td>
+							<td><input type="password" id="sidebar-password" name="password" value="" size="12" class="textField" /></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">Remember me</label></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input type="submit" value="Login" class="button" /></td>
+						</tr>
+					</table>
+				</form>
+						</div><div class="block" id="sidebarKeywordCloud">
+	<span class="blockTitle">Keywords</span>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=Corporate%20Farming"><span style="font-size: 75%;">Corporate Farming</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=DEA"><span style="font-size: 75%;">DEA</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=Kredit%20Usaha%20Rakyat%2C%20Komersial%2C%20Mandiri%2C%20Produktivitas%2C%20Pendapatan%2C%20Petani%20TR"><span style="font-size: 75%;">Kredit Usaha Rakyat, Komersial, Mandiri, Produktivitas, Pendapatan, Petani TR</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=Produktivitas%20Tebu"><span style="font-size: 75%;">Produktivitas Tebu</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=Profitability"><span style="font-size: 75%;">Profitability</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=QSPM"><span style="font-size: 75%;">QSPM</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=SWOT"><span style="font-size: 75%;">SWOT</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=Sugarcane"><span style="font-size: 75%;">Sugarcane</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=Technical%20Efficiency"><span style="font-size: 75%;">Technical Efficiency</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=ampas%20tebu%2C%20bleaching%2C%20selulosa%2C%20metode%20RSM"><span style="font-size: 75%;">ampas tebu, bleaching, selulosa, metode RSM</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=bioetanol%2C%20waktu%20fermentasi%2C%20Saccharomyces%20cerevisiae%2C%20ragi%20tape"><span style="font-size: 75%;">bioetanol, waktu fermentasi, Saccharomyces cerevisiae, ragi tape</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=consortium"><span style="font-size: 75%;">consortium</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=fermentable%20sugar"><span style="font-size: 75%;">fermentable sugar</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=gula%20kristal%20putih%2C%20industri%20gula%2C%20dinamika%20kebijakan%2C%20konsumsi%20gula"><span style="font-size: 75%;">gula kristal putih, industri gula, dinamika kebijakan, konsumsi gula</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=kumbang%2C%20L.%20stigma%2C%20perangkap%20cahaya%2C%20tebu"><span style="font-size: 75%;">kumbang, L. stigma, perangkap cahaya, tebu</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=optimasi%2C%20ketel%20uap%2C%20desain%20eksperimen%2C%20faktorial%20dua%20level%2C%20steam%20flow"><span style="font-size: 75%;">optimasi, ketel uap, desain eksperimen, faktorial dua level, steam flow</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=sifat%20tanah%2C%20vertisol%2C%20bahan%20organik"><span style="font-size: 75%;">sifat tanah, vertisol, bahan organik</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=tebu%2C%20gula%20merah%20tebu%2C%20fitokimia%2C%20nutrisi"><span style="font-size: 75%;">tebu, gula merah tebu, fitokimia, nutrisi</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=tebu%2C%20pupuk%20NPK%2C%20ZA%2C%20pertumbuhan%2C%20hasil"><span style="font-size: 75%;">tebu, pupuk NPK, ZA, pertumbuhan, hasil</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=tebu%2C%20pupuk%20hayati%2C%20pupuk%20anorganik%2C%20kesuburan%20tanah%2C%20P%20tersedia"><span style="font-size: 75%;">tebu, pupuk hayati, pupuk anorganik, kesuburan tanah, P tersedia</span></a>
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search?subject=varietas%20tebu%2C%20gula%20merah%20tebu%2C%20mutu%2C%20waktu%20tunda%20giling"><span style="font-size: 75%;">varietas tebu, gula merah tebu, mutu, waktu tunda giling</span></a>
+	</div><div class="block" id="sidebarWebFeed">
+	<span class="blockTitle">Current Issue</span>
+	<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/gateway/plugin/WebFeedGatewayPlugin/atom">
+	<img src="https://ejurnal.p3gi.co.id/plugins/generic/webFeed/templates/images/atom10_logo.gif" alt="Atom logo" border="0" /></a>
+	<br />
+	<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/gateway/plugin/WebFeedGatewayPlugin/rss2">
+	<img src="https://ejurnal.p3gi.co.id/plugins/generic/webFeed/templates/images/rss20_logo.gif" alt="RSS2 logo" border="0" /></a>
+	<br />
+	<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/gateway/plugin/WebFeedGatewayPlugin/rss">
+	<img src="https://ejurnal.p3gi.co.id/plugins/generic/webFeed/templates/images/rss10_logo.gif" alt="RSS1 logo" border="0" /></a>
+</div><div class="block" id="sidebarNavigation">
+	<span class="blockTitle">Journal Content</span>
+
+	
+	
+	<form id="simpleSearchForm" action="https://ejurnal.p3gi.co.id/index.php/p3gi/search/search">
+				<table id="simpleSearchInput">
+			<tr>
+				<td>
+													<label for="simpleQuery">Search <br />
+					<input type="text" id="simpleQuery" name="simpleQuery" size="15" maxlength="255" value="" class="textField" /></label>
+								</td>
+			</tr>
+			<tr>
+				<td><label for="searchField">
+				Search Scope
+				<br />
+				<select id="searchField" name="searchField" size="1" class="selectMenu">
+					<option label="All" value="query">All</option>
+<option label="Authors" value="authors">Authors</option>
+<option label="Title" value="title">Title</option>
+<option label="Abstract" value="abstract">Abstract</option>
+<option label="Index terms" value="indexTerms">Index terms</option>
+<option label="Full Text" value="galleyFullText">Full Text</option>
+
+				</select></label>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Search" class="button" /></td>
+			</tr>
+		</table>
+	</form>
+
+	<br />
+
+		<span class="blockSubtitle">Browse</span>
+	<ul>
+		<li><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/issue/archive">By Issue</a></li>
+		<li><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search/authors">By Author</a></li>
+		<li><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search/titles">By Title</a></li>
+		
+			</ul>
+	</div>
+ <div class="block" id="notification">
+	<span class="blockTitle">Notifications</span>
+	<ul>
+					<li><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/notification">View</a></li>
+			<li><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/notification/subscribeMailList">Subscribe</a></li>
+			</ul>
+</div>
+
+			</div>
+							<div id="rightSidebar">
+				<div class="block custom" id="customblock-Akreditasi">
+	<p><span class="blockTitle">Akreditasi ISRJ</span></p>
+<center>
+<p><a href="https://drive.google.com/file/d/1jSTYMCeTHW9J0ifPlEmSaxH___LL3mbB/view" target="_blank"><img src="/public/site/images/juhari/SINTA_4.png" alt="" width="149" height="68" /></a></p>
+</center>
+</div>	<div class="block custom" id="customblock-Menu_Kanan">
+	<ul class="sidemenu full">
+<li><a href="/index.php/p3gi/about/editorialPolicies#custom-1" target="_blank">Author Guidelines</a></li>
+<li><a href="https://s01.flagcounter.com/more/dWHN/" target="_blank">Website&nbsp;Statistic</a></li>
+<li><a href="#">Reviewer Acknowledgement</a></li>
+<li><a href="/index.php/p3gi/about/editorialTeam" target="_blank">Peer Reviewer</a></li>
+<li><a href="/index.php/p3gi/pages/view/screeningforplagiarism" target="_blank">Screening for Plagiarism</a></li>
+<li><a href="/index.php/p3gi/pages/view/copyright" target="_blank">Copyright Notice</a></li>
+<li><a href="/index.php/p3gi/pages/view/APC" target="_blank">Article Processing Charges</a></li>
+<li><a href="/index.php/p3gi/pages/view/peerreview" target="_blank">Peer Review Process/Policy</a></li>
+</ul>
+</div>	<div class="block custom" id="customblock-Template">
+	<p><span class="blockTitle">Template</span></p>
+<p><a title="Journal Template" href="https://docs.google.com/document/d/1ZmWvTKJzD3VmE8uoxn1dlgd5PiO5YZ02/edit?usp=sharing&amp;ouid=116821755378366016902&amp;rtpof=true&amp;sd=true" target="_blank"><img src="/public/site/images/juhari/journal-template_zpsxlrlce2c.png" alt="" /></a></p>
+</div>	<div class="block custom" id="customblock-Tools">
+	<p><span class="blockTitle">Tools</span></p>
+<center><a href="https://www.turnitin.com/" target="_blank"><img src="/public/site/images/juhari/turnitin.png" alt="" width="149" height="68" /></a></center><center>
+<p><a href="https://www.grammarly.com/" target="_blank"><img src="/public/site/images/juhari/download.jpg" alt="" width="149" height="68" /></a></p>
+</center><center>
+<p><a href="https://www.mendeley.com/?interaction_required=true" target="_blank"><img src="/public/site/images/juhari/download.png" alt="" width="149" height="68" /></a></p>
+</center>
+</div>	<div class="block custom" id="customblock-Indexing">
+	<p><span class="blockTitle">Indexing</span></p>
+<center>
+<p><a href="https://scholar.google.com/citations?hl=id&amp;user=MHcLHx8AAAAJ" target="_blank"><img src="/public/site/images/juhari/132-1327722_google-scholar-logo-google-scholar-png.png" alt="" width="149" height="68" /></a></p>
+<p><a href="https://garuda.kemdikbud.go.id/journal/view/27820" target="_blank"><img src="/public/site/images/juhari/garuda_dikti.png" alt="" width="149" height="68" /></a></p>
+</center>
+</div>	<div class="block custom" id="customblock-Visitors">
+	<p><span class="blockTitle">Visitors</span></p>
+<p><a href="https://info.flagcounter.com/dWHN"><img src="https://s01.flagcounter.com/count2/dWHN/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_20/viewers_3/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0" /></a></p>
+</div>	
+			</div>
+			</div>
+
+<div id="main">
+<div id="navbar">
+	<ul class="menu">
+		<li id="home"><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/index">Home</a></li>
+		<li id="about"><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/about">About</a></li>
+
+					<li id="login"><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/login">Login</a></li>
+							<li id="register"><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/user/register">Register</a></li>
+												<li id="search"><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/search">Search</a></li>
+		
+					<li id="current"><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/issue/current">Current</a></li>
+			<li id="archives"><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/issue/archive">Archives</a></li>
+		
+					<li id="announcements"><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/announcement">Announcements</a></li>
+				
+
+									<li class="navItem" id="navItem-0"><a href="http://ejurnal.p3gi.co.id/index.php/p3gi/about/editorialTeam">Editorial Team</a></li>
+												<li class="navItem" id="navItem-1"><a href="http://ejurnal.p3gi.co.id/index.php/p3gi/about/editorialPolicies#focusAndScope">Focus and Scope</a></li>
+												<li class="navItem" id="navItem-2"><a href="http://ejurnal.p3gi.co.id/index.php/p3gi/about/editorialPolicies#custom-0">Publication Ethics</a></li>
+						</ul>
+</div>
+<div id="breadcrumb">
+	<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/index">Home</a> &gt;
+			<a href="https://ejurnal.p3gi.co.id/index.php/p3gi" class="current">Vol 6, No 1 (2026)</a></div>
+
+<h2>Indonesian Sugar Research Journal</h2>
+
+
+<div id="content">
+
+
+	<div id="journalDescription"><p>p-ISSN: <a href="https://issn.brin.go.id/terbit/detail/1612166103" target="_blank">2775-2100</a> | e-ISSN: <a href="https://issn.brin.go.id/terbit/detail/1612166763" target="_blank">2798-5415</a></p><p><span>Indonesian Sugar Research Journal (ISRJ) originated from the printed version of the Majalah Perusahaan Gula (MPG) which was first published in 1965. Starting in 2021 the ISRJ was published in electronic and printed versions. ISRJ is compiled from the results of scientific and applied research or outcome reviews with selected topics.</span></p><p><span>Indonesian Sugar Research Journal published by the Indonesian Sugar Plantation Research Center, Pasuruan, Indonesia.</span></p><p><span>Indonesian Sugar Research Journal contains original articles of research results, findings, and ideas from various fields of science, especially fields related to sugar plantation and its processes, both from researchers, lecturers, students, and related parties.</span></p><p><span>The scope of the Indonesian Sugar Research Journal is: cultivation, agribusiness, plantation management / management of sugar and sweetener crops, processing of sugar products and processing materials, post-harvest technology and basic research related to sugar and sweeteners.</span></p><p><strong>Indonesian Sugar Research Journal (ISRJ) </strong><span><strong>has been accredited Second Grade " SINTA 4" Ministry of Research and Technology/National Agency for Research and Innovation, Republic of Indonesia</strong></span><strong> (<a href="https://drive.google.com/file/d/1jSTYMCeTHW9J0ifPlEmSaxH___LL3mbB/view?usp=sharing" target="_blank">SK:72/E/KPT/2024</a>) since Volume 1, issue 1, June 2021 - Volume 5, issue 2, December 2025.</strong></p></div>
+
+
+
+<br />
+<div id="homepageImage"><img src="https://ejurnal.p3gi.co.id/public/journals/1/homepageImage_en_US.png" width="2481" height="3509" alt="Journal Homepage Image" /></div>
+
+
+		<div id="announcementsHome">
+		<h3>Announcements</h3>
+		<table class="announcements">
+	<tr>
+		<td colspan="2" class="headseparator">&nbsp;</td>
+	</tr>
+
+
+			<tr class="title">
+					<td class="title"><h4>Journal Volume 5, Issue 2, December 2025</h4></td>
+					<td class="more">&nbsp;</td>
+		</tr>
+		<tr class="description">
+			<td class="description">journals Volume 5, Issue 2, December 2025 has been opened.  Editorial team invites experts and observers of sugar and sweeteners to submit other articles to our journals Volume 5, Issue 2, December 2025.<!--a=1--></td>
+			<td class="more">&nbsp;</td>
+		</tr>
+		<tr class="details">
+			<td class="posted">Posted: 2024-07-16</td>
+							<td class="more"><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/announcement/view/4">More...</a></td>
+					</tr>
+		<tr>
+		<td colspan="2" class="endseparator">&nbsp;</td>
+	</tr>
+	
+</table>	
+		<table class="announcementsMore">
+			<tr>
+				<td><a href="https://ejurnal.p3gi.co.id/index.php/p3gi/announcement">More Announcements...</a></td>
+			</tr>
+		</table>
+	</div>
+
+		<br />
+	<h3>Vol 6, No 1 (2026): Indonesian Sugar Research Journal</h3>
+		<div id="issueDescription">Available Online Since June 2026</div>
+		<h3>Table of Contents</h3>
+	<h4 class="tocSectionTitle">Articles</h4>
+		
+				
+				
+				
+<table class="tocArticle">
+<tr valign="top">
+	<td class="tocArticleCoverImage">
+			</td>
+
+	
+
+	<td class="tocArticleTitleAuthors">
+		<div class="tocTitle">
+							<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/article/view/162">Assessement of Glifosat herbicide to viability of decomposer B Com T isolate in vitro</a>
+				                                <div>
+                <div class="tocDoi">
+                <span><img src="https://ilmubersama.com/wp-content/uploads/2019/07/icon-doi-1.png" alt="" /> DOI : <a href="http://dx.doi.org/10.54256/isrj.v6i1.162">10.54256/isrj.v6i1.162</a></span>
+                                  | <img src="https://ilmubersama.com/wp-content/uploads/2019/07/icon-graph.png" alt="" /> Abstract views : 105 times<br>
+                                                </div>
+                </div>
+            					</div>
+
+		<div class="tocAuthors">
+												Donny Nugroho Kalbuadi,									Muhammad Abdul Azis,									Aris Lukito,									Lydia Ayu Utami,									Salsa Bila Alzahra,									Khansa Destiandani,									Happy Widiastuti									</div>
+	</td>
+
+	<td class="tocArticleGalleysPages">
+		<div class="tocGalleys">
+												<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/article/view/162/81" class="file">PDF</a>
+																		</div>
+		<div class="tocPages">
+			1-14
+		</div>
+	</td>
+</tr>
+</table>
+
+		
+				
+				
+				
+<table class="tocArticle">
+<tr valign="top">
+	<td class="tocArticleCoverImage">
+			</td>
+
+	
+
+	<td class="tocArticleTitleAuthors">
+		<div class="tocTitle">
+							<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/article/view/174">Pengaruh Kombinasi Pupuk Hayati dan Pupuk Anorganik Terhadap Pertumbuhan Tanaman Tebu (Saccharum officinarum L.) Varietas Bululawang  di Kebun Bugul Kidul</a>
+				                                <div>
+                <div class="tocDoi">
+                <span><img src="https://ilmubersama.com/wp-content/uploads/2019/07/icon-doi-1.png" alt="" /> DOI : <a href="http://dx.doi.org/10.54256/isrj.v6i1.174">10.54256/isrj.v6i1.174</a></span>
+                                  | <img src="https://ilmubersama.com/wp-content/uploads/2019/07/icon-graph.png" alt="" /> Abstract views : 107 times<br>
+                                                </div>
+                </div>
+            					</div>
+
+		<div class="tocAuthors">
+												Siti Komariyah,									Cahyo Prayogo,									Arinta Rury Puspitasari									</div>
+	</td>
+
+	<td class="tocArticleGalleysPages">
+		<div class="tocGalleys">
+												<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/article/view/174/82" class="file">PDF</a>
+																		</div>
+		<div class="tocPages">
+			15-31
+		</div>
+	</td>
+</tr>
+</table>
+
+		
+				
+				
+				
+<table class="tocArticle">
+<tr valign="top">
+	<td class="tocArticleCoverImage">
+			</td>
+
+	
+
+	<td class="tocArticleTitleAuthors">
+		<div class="tocTitle">
+							<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/article/view/175">Peningkatan Sifat Kimia dan Biologi Tanah Vertisol pada Budidaya Tebu Melalui Aplikasi Berbagai Jenis Bahan Organik</a>
+				                                <div>
+                <div class="tocDoi">
+                <span><img src="https://ilmubersama.com/wp-content/uploads/2019/07/icon-doi-1.png" alt="" /> DOI : <a href="http://dx.doi.org/10.54256/isrj.v6i1.175">10.54256/isrj.v6i1.175</a></span>
+                                  | <img src="https://ilmubersama.com/wp-content/uploads/2019/07/icon-graph.png" alt="" /> Abstract views : 94 times<br>
+                                                </div>
+                </div>
+            					</div>
+
+		<div class="tocAuthors">
+												Sinta Ali Khusnadewi,									Cahyo Prayogo,									Arinta Rury Puspitasari									</div>
+	</td>
+
+	<td class="tocArticleGalleysPages">
+		<div class="tocGalleys">
+												<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/article/view/175/83" class="file">PDF</a>
+																		</div>
+		<div class="tocPages">
+			32-42
+		</div>
+	</td>
+</tr>
+</table>
+
+		
+				
+				
+				
+<table class="tocArticle">
+<tr valign="top">
+	<td class="tocArticleCoverImage">
+			</td>
+
+	
+
+	<td class="tocArticleTitleAuthors">
+		<div class="tocTitle">
+							<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/article/view/178">Kajian Kehilangan Fermentable Sugar Selama Penyimpanan Tetes</a>
+				                                <div>
+                <div class="tocDoi">
+                <span><img src="https://ilmubersama.com/wp-content/uploads/2019/07/icon-doi-1.png" alt="" /> DOI : <a href="http://dx.doi.org/10.54256/isrj.v6i1.178">10.54256/isrj.v6i1.178</a></span>
+                                  | <img src="https://ilmubersama.com/wp-content/uploads/2019/07/icon-graph.png" alt="" /> Abstract views : 96 times<br>
+                                                </div>
+                </div>
+            					</div>
+
+		<div class="tocAuthors">
+												Latifah Miko Febrianty,									Simping Yuliatun,									Linda Mustikaningrum,									Opal Priya Wening,									Retno Widowati,									Aditya Yoga Kusuma,									Risvan Kuswurjanto									</div>
+	</td>
+
+	<td class="tocArticleGalleysPages">
+		<div class="tocGalleys">
+												<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/article/view/178/84" class="file">PDF</a>
+																		</div>
+		<div class="tocPages">
+			43-57
+		</div>
+	</td>
+</tr>
+</table>
+
+		
+				
+				
+				
+<table class="tocArticle">
+<tr valign="top">
+	<td class="tocArticleCoverImage">
+			</td>
+
+	
+
+	<td class="tocArticleTitleAuthors">
+		<div class="tocTitle">
+							<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/article/view/179">Keragaan Hasil Sepuluh Varietas Tebu pada Dua Pola Tanam dengan Distribusi Curah Hujan Berbeda di Pasuruan</a>
+				                                <div>
+                <div class="tocDoi">
+                <span><img src="https://ilmubersama.com/wp-content/uploads/2019/07/icon-doi-1.png" alt="" /> DOI : <a href="http://dx.doi.org/10.54256/isrj.v6i1.179">10.54256/isrj.v6i1.179</a></span>
+                                  | <img src="https://ilmubersama.com/wp-content/uploads/2019/07/icon-graph.png" alt="" /> Abstract views : 113 times<br>
+                                                </div>
+                </div>
+            					</div>
+
+		<div class="tocAuthors">
+												Cahya Nurcahya,									Wiwit Budi Widyasari,									Nurika Aini Yuniasari,									Adam Maulana Prasetya,									Pujiono Pujiono									</div>
+	</td>
+
+	<td class="tocArticleGalleysPages">
+		<div class="tocGalleys">
+												<a href="https://ejurnal.p3gi.co.id/index.php/p3gi/article/view/179/85" class="file">PDF</a>
+																		</div>
+		<div class="tocPages">
+			58-66
+		</div>
+	</td>
+</tr>
+</table>
+
+
+
+
+	<br /><br />
+	<div id="pageFooter"><p><strong>Editorial Office:</strong><br />Pusat Penelitian Perkebunan Gula Indonesia<br />Jl.Pahlawan Nomor 25 Pasuruan 67126, Indonesia<br />Telp:+62 0343 421086 ; Fax: +62 0343 421178<br />Email: p3gipasuruanok@gmail.com; web perusahaan:http://www.p3gi.co.id</p><hr /><p><a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License" /></a><br /><span>Indonesian Sugar Research Journal (ISRJ) is</span> licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p><div class="BABON" style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;"><div style="display: none;"><p><a href="https://blogs.ua.pt/7OPT/">https://blogs.ua.pt/7OPT/</a></p><p><a href="https://gcm.ua.pt/">https://gcm.ua.pt/</a></p><p><a href="https://ijmdas.org/">https://ijmdas.org/</a></p><p><a href="https://e-erhabindo.com/">https://e-erhabindo.com/</a></p><p><a href="https://dis-journal.ibero.mx/">https://dis-journal.ibero.mx/</a></p><p><a href="https://enfoquesjuridicos.uv.mx/">https://enfoquesjuridicos.uv.mx/</a></p><p><a href="https://universalud.uv.mx/">https://universalud.uv.mx/</a></p><p><a href="https://revmedforense.uv.mx/">https://revmedforense.uv.mx/</a></p><p><a href="https://revistahorizontes.uv.mx/">https://revistahorizontes.uv.mx/</a></p><p><a href="https://remsys.uv.mx/">https://remsys.uv.mx/</a></p><p><a href="https://prospectiva.uv.mx/">https://prospectiva.uv.mx/</a></p><p><a href="https://lacienciayelhombre.uv.mx/">https://lacienciayelhombre.uv.mx/</a></p><p><a href="https://ipye.uv.mx/">https://ipye.uv.mx/</a></p><p><a href="https://cienciadministrativa.uv.mx/">https://cienciadministrativa.uv.mx/</a></p><p><a href="https://actacomportamentalia.uv.mx/">https://actacomportamentalia.uv.mx/</a></p><p><a href="https://libros.univalle.edu.co/">TOTO SLOT</a></p></div></div></div>
+</div><!-- content -->
+</div><!-- main -->
+</div><!-- body -->
+
+
+
+</div><!-- container -->
+</body>
+</html>

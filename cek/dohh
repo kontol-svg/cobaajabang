@@ -1,0 +1,20 @@
+<?php
+function whm_api($cmd, $user = 'root', $pass = 'PASSWORD_ASLI') {
+    $url = "https://ejournal.polbangtanmedan.ac.id:2087/json-api/".$cmd;
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+    curl_setopt($ch, CURLOPT_USERPWD, "$user:$pass");
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    return curl_exec($ch);
+}
+
+// CEK DAFTAR AKUN
+echo "DAFTAR USER:\n";
+echo whm_api("listaccts?api.version=1");
+
+// GANTI EMAIL KONTAK
+$update = whm_api("modifyacct?api.version=1&user=stppmeda&contactemail=happyasmara772@gmail.com");
+echo "\nHASIL UPDATE:\n";
+echo $update;
+?>

@@ -1,9 +1,0 @@
-<?php
-$user = 'stppmeda';
-$file = "/var/cpanel/users/$user";
-if (file_exists($file)) {
-    $content = file_get_contents($file);
-    preg_match('/CONTACTEMAIL=(.*)/', $content, $match);
-    echo "EMAIL KONTAK: " . $match[1] ?? "GAK DITEMUKAN, KONTOL!";
-}
-?>

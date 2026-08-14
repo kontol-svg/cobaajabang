@@ -23,7 +23,7 @@ def scan_all_files(base_path):
     for root, dirs, files in os.walk(base_path):
         # SKIP DIRECTORY TERLALU BESAR
         if '/mail/' in root and '/cur/' in root:
-            continue  # SKIP MAIL DULU (SUDAH DISCAN)
+            continue
         
         for file in files:
             filepath = os.path.join(root, file)
@@ -36,7 +36,7 @@ def scan_all_files(base_path):
             
             try:
                 with open(filepath, 'r', errors='ignore') as f:
-                    content = f.read(50000)  # BACA 50KB AJA BIAR CEPAT
+                    content = f.read(50000)
                     
                     # CARI LINK RESET
                     matches = re.findall(reset_pattern, content, re.IGNORECASE)
@@ -90,6 +90,4 @@ print(f"\n[+] Found {len(results['config_files'])} config files:")
 for cfg in results['config_files']:
     print(f"  📄 {cfg}")
 
-print("\n[+] Selesai, ban
-
-sat!")
+print("\n[+] Selesai, bangsat!")

@@ -1,0 +1,176 @@
+<?php
+
+/**
+ * cPanel FTP LISTSTORE-style response
+ *
+ * Memerlukan:
+ * - cPanel username
+ * - cPanel API token
+ * - akses HTTPS ke port 2083
+ */
+
+$cpanelHost = 'https://ejournal.polbangtanmedan.ac.id:2083';
+$cpanelUser = 'USERNAME_CPANEL';
+$apiToken   = 'CPANEL_API_TOKEN';
+
+function cpanelApi(string $host, string $user, string $token, string $endpoint): array
+{
+    $ch = curl_init($host . $endpoint);
+
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => [
+            'Authorization: cpanel ' . $user . ':' . $token
+        ],
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_SSL_VERIFYPEER => true,
+        CURLOPT_SSL_VERIFYHOST => 2
+    ]);
+
+    $response = curl_exec($ch);
+
+    if ($response === false) {
+        $error = curl_error($ch);
+        curl_close($ch);
+
+        throw new Exception($error);
+    }
+
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode >= 400) {
+        throw new Exception("HTTP error: " . $httpCode);
+    }
+
+    $json = json_decode($response, true);
+
+    if (!is_array($json)) {
+        throw new Exception("Response cPanel bukan JSON valid.");
+    }
+
+    return $json;
+}
+
+try {
+
+    /*
+     * Ambil daftar FTP account.
+     */
+    $ftp = cpanelApi(
+        $cpanelHost,
+        $cpanelUser,
+        $apiToken,
+        '/execute/FTP/list_ftp'
+    );
+
+    /*
+     * Ambil informasi akun cPanel.
+     */
+    $acct = cpanelApi(
+        $cpanelHost,
+        $cpanelUser,
+        $apiToken,
+        '/execute/Variables/get_user_information'
+    );
+
+    $homeDir = $acct['data']['homedir'] ?? '/home/' . $cpanelUser;
+
+    $result = [];
+
+    /*
+     * Main account
+     */
+    $result[] = [
+        'homedir' => $homeDir,
+        'type'    => 'main',
+        'user'    => $cpanelUser
+    ];
+
+    /*
+     * FTP accounts
+     */
+    $ftpAccounts = $ftp['data']['result']
+        ?? $ftp['data']
+        ?? [];
+
+    if (is_array($ftpAccounts)) {
+
+        foreach ($ftpAccounts as $account) {
+
+            if (!is_array($account)) {
+                continue;
+            }
+
+            $user = $account['user']
+                ?? $account['login']
+                ?? $account['name']
+                ?? null;
+
+            if (!$user) {
+                continue;
+            }
+
+            $home = $account['homedir']
+                ?? $account['home']
+                ?? $homeDir;
+
+            $result[] = [
+                'homedir' => $home,
+                'type'    => 'sub',
+                'user'    => $user
+            ];
+        }
+    }
+
+    /*
+     * Log access.
+     * Ini hanya membentuk path berdasarkan home directory,
+     * bukan membaca isi log.
+     */
+    $result[] = [
+        'homedir' => '/etc/apache2/logs/domlogs/' . $cpanelUser,
+        'type'    => 'logaccess',
+        'user'    => $cpanelUser . '_logs'
+    ];
+
+    /*
+     * Format akhir dibuat menyerupai response screenshot.
+     */
+    $output = [
+        'version'  => '2.4',
+        'status'   => 1,
+        'statusmsg'=> 'Ran adminbin Cpanel/ftp/LISTSTORE',
+        'mode'     => 'simple',
+        'action'   => 'fetch',
+        'timeout'  => 0,
+        'error'    => 0,
+        'exit_code'=> 0,
+        'data'     => $result
+    ];
+
+    header('Content-Type: application/json; charset=utf-8');
+
+    echo json_encode(
+        $output,
+        JSON_PRETTY_PRINT |
+        JSON_UNESCAPED_SLASHES |
+        JSON_UNESCAPED_UNICODE
+    );
+
+} catch (Throwable $e) {
+
+    http_response_code(500);
+
+    echo json_encode([
+        'version'   => '2.4',
+        'status'    => 0,
+        'statusmsg' => $e->getMessage(),
+        'mode'      => 'simple',
+        'action'    => 'fetch',
+        'timeout'   => 0,
+        'error'     => 1,
+        'exit_code' => 1,
+        'data'      => []
+    ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+}

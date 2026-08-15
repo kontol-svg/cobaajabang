@@ -1,24 +1,13 @@
-{**
- * templates/frontend/components/headerHead.tpl
- *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
- * Common site header <head> tag and contents.
- *}
-<head>
-	<meta charset="{$defaultCharset|escape}">
-	<meta name="google-site-verification" content="Up0yu73YYoBkunbcFBVr9qi2O1VCAAip_Yxgj3cuUNk" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>
-		{$pageTitleTranslated|strip_tags}
-		{* Add the journal name to the end of page titles *}
-		{if $requestedPage|escape|default:"index" != 'index' && $currentContext && $currentContext->getLocalizedName()}
-			| {$currentContext->getLocalizedName()}
-		{/if}
-	</title>
+<?php
+// Simpan sebagai get_domains.php
+$username = 'stppmeda';
+$command = "/usr/local/cpanel/bin/uapi --user={$username} DomainInfo list_domains";
+exec($command, $output, $return_var);
 
-	{load_header context="frontend"}
-	{load_stylesheet context="frontend"}
-</head>
+if ($return_var === 0) {
+    $data = json_decode(implode("\n", $output), true);
+    print_r($data);
+} else {
+    echo "Error: " . implode("\n", $output);
+}
+?>

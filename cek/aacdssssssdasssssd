@@ -1,0 +1,5 @@
+<?php
+// Jalankan command dan tampilkan outputnya
+$output = shell_exec('uapi --user=stppmeda Ftp list_ftp 2>&1');
+echo "<pre>$output</pre>";
+?>

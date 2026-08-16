@@ -1,0 +1,10 @@
+#!/usr/local/cpanel/3rdparty/bin/perl
+
+use strict;
+use warnings;
+use JSON::PP;
+use Cpanel::API;
+
+my $result = Cpanel::API::execute('Ftp', 'list_ftp');
+
+print JSON::PP->new->pretty->encode($result);

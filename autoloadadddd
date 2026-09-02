@@ -1036,13 +1036,26 @@
 
 
         public static function getShortcodes()
-        {
-           return self::$shortcode_tags;
-        }
+{
+    return self::$shortcode_tags;
+}
 
-        private static $shortcode_tags = array();
-        public static function importShortCodeFiles()
-        {
+private static $shortcode_tags = array();
+
+public static function addShortcode($tag, $func)
+{
+    if (is_callable($func)) {
+        self::$shortcode_tags[$tag] = $func;
+    }
+}
+
+public static function removeShortcode($tag)
+{
+    unset(self::$shortcode_tags[$tag]);
+}
+
+public static function importShortCodeFiles()
+{
 
             $shortcodes = array();
 

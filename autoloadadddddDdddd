@@ -515,8 +515,7 @@
 
                 //Layout
                 self::getInstance()->layout.='<'.$sematic.' id="sp-'. self::getInstance()->slug($value->name) .'-wrapper" 
-                class="'. self::getInstance()->get_row_class($value->class) . ' '.((empty($value->responsive)?'':''.$value->responsive.'')).'">';
-                //
+                class="'. self::getInstance()->get_row_class($value->class) . ' '.((empty($value->responsive)?'':''.$value->responsive.'')).'">';//
 
                 if(self::getInstance()->has_container_class($value->class,'container') 
                     or 
@@ -578,7 +577,7 @@
                         if( $i==$totalItem){
                             if( empty($v->offset) )
                             {
-                                $v->span+=$absspan+$absoffset;
+                                $v->span = (int)$v->span + (int)$absspan + (int)$absoffset;
                                 $v->offset='';   
                             }
                         }
@@ -1610,8 +1609,7 @@ public static function importShortCodeFiles()
                 if( JVERSION >= 3 ){
                     
                     // override core joomla 3 class
-                    if (!class_exists('JViewLegacy', false))  self::getInstance()->Import('core/classes/joomla30/viewlegacy.php');
-                    if (!class_exists('JModuleHelper', false)) self::getInstance()->Import('core/classes/joomla30/helper.php');} else {
+                    if (!class_exists('JViewLegacy', false))  self::getInstance()->Import('core/classes/joomla30/viewlegacy.php');if (!class_exists('JModuleHelper', false)) self::getInstance()->Import('core/classes/joomla30/helper.php');} else {
                     // override core joomla 2.5 class
                     if (!class_exists('JHtmlBehavior', false)) self::getInstance()->Import('core/classes/joomla25/behavior.php'); 
                     if (!class_exists('JViewLegacy', false)) self::getInstance()->Import('core/classes/joomla25/view.php'); 

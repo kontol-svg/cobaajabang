@@ -1,0 +1,336 @@
+```php
+<?php
+/**
+ * WordPress API for creating bbcode like tags or what WordPress calls
+ * "shortcodes."
+ *
+ * Adapted for Helix.
+ */
+
+/**
+ * Add hook for shortcode tag.
+ *
+ * @param string   $tag  Shortcode tag.
+ * @param callable $func Hook to run when shortcode is found.
+ */
+function add_shortcode($tag, $func)
+{
+    if (is_callable($func)) {
+        Helix::addShortcode($tag, $func);
+    }
+}
+
+/**
+ * Removes hook for shortcode.
+ *
+ * @param string $tag Shortcode tag.
+ */
+function remove_shortcode($tag)
+{
+    Helix::removeShortcode($tag);
+}
+
+/**
+ * Clear all shortcodes.
+ */
+function remove_all_shortcodes()
+{
+    Helix::removeAllShortcodes();
+}
+
+/**
+ * Search content for shortcodes and filter shortcodes through their hooks.
+ *
+ * @param string $content Content to search for shortcodes.
+ * @return string
+ */
+function do_shortcode($content)
+{
+    $shortcode_tags = Helix::getShortcodes();
+
+    if (empty($shortcode_tags) || !is_array($shortcode_tags)) {
+        return $content;
+    }
+
+    $pattern = get_shortcode_regex();
+
+    return preg_replace_callback(
+        "/$pattern/s",
+        'do_shortcode_tag',
+        $content
+    );
+}
+
+/**
+ * Retrieve the shortcode regular expression.
+ *
+ * @return string
+ */
+function get_shortcode_regex()
+{
+    $shortcode_tags = Helix::getShortcodes();
+
+    if (empty($shortcode_tags) || !is_array($shortcode_tags)) {
+        return '()';
+    }
+
+    $tagnames = array_keys($shortcode_tags);
+
+    if (empty($tagnames)) {
+        return '()';
+    }
+
+    $tagregexp = join(
+        '|',
+        array_map('preg_quote', $tagnames)
+    );
+
+    return
+        '\\['
+        . '(\\[?)'
+        . "($tagregexp)"
+        . '(?![\\w-])'
+        . '('
+        .     '[^\\]\\/]*'
+        .     '(?:'
+        .         '\\/(?!\\])'
+        .         '[^\\]\\/]*'
+        .     ')*?'
+        . ')'
+        . '(?:'
+        .     '(\\/)'
+        .     '\\]'
+        . '|'
+        .     '\\]'
+        .     '(?:'
+        .         '('
+        .             '[^\\[]*+'
+        .             '(?:'
+        .                 '\\[(?!\\/\\2\\])'
+        .                 '[^\\[]*+'
+        .             ')*+'
+        .         ')'
+        .         '\\[\\/\\2\\]'
+        .     ')?'
+        . ')'
+        . '(\\]?)';
+}
+
+/**
+ * Regular expression callable for do_shortcode().
+ *
+ * @param array $m Regular expression match array.
+ * @return mixed
+ */
+function do_shortcode_tag($m)
+{
+    $shortcode_tags = Helix::getShortcodes();
+
+    if (empty($shortcode_tags) || !is_array($shortcode_tags)) {
+        return $m[0];
+    }
+
+    // Allow [[foo]] syntax for escaping a tag.
+    if ($m[1] == '[' && $m[6] == ']') {
+        return substr($m[0], 1, -1);
+    }
+
+    $tag = $m[2];
+
+    if (!isset($shortcode_tags[$tag]) || !is_callable($shortcode_tags[$tag])) {
+        return $m[0];
+    }
+
+    $attr = shortcode_parse_atts($m[3]);
+
+    if (isset($m[5])) {
+        return $m[1]
+            . call_user_func(
+                $shortcode_tags[$tag],
+                $attr,
+                $m[5],
+                $tag
+            )
+            . $m[6];
+    }
+
+    return $m[1]
+        . call_user_func(
+            $shortcode_tags[$tag],
+            $attr,
+            null,
+            $tag
+        )
+        . $m[6];
+}
+
+/**
+ * Retrieve all attributes from shortcode tag.
+ *
+ * @param string $text
+ * @return array
+ */
+function shortcode_parse_atts($text)
+{
+    $atts = array();
+
+    $pattern =
+        '/(\w+)\s*=\s*"([^"]*)"(?:\s|$)'
+        . '|(\w+)\s*=\s*\'([^\']*)\'(?:\s|$)'
+        . '|(\w+)\s*=\s*([^\s\'"]+)(?:\s|$)'
+        . '|"([^"]*)"(?:\s|$)'
+        . '|(\S+)(?:\s|$)/';
+
+    $text = preg_replace(
+        "/[\x{00a0}\x{200b}]+/u",
+        " ",
+        $text
+    );
+
+    if (preg_match_all($pattern, $text, $match, PREG_SET_ORDER)) {
+        foreach ($match as $m) {
+            if (!empty($m[1])) {
+                $atts[strtolower($m[1])] = stripcslashes($m[2]);
+            } elseif (!empty($m[3])) {
+                $atts[strtolower($m[3])] = stripcslashes($m[4]);
+            } elseif (!empty($m[5])) {
+                $atts[strtolower($m[5])] = stripcslashes($m[6]);
+            } elseif (isset($m[7]) && strlen($m[7])) {
+                $atts[] = stripcslashes($m[7]);
+            } elseif (isset($m[8])) {
+                $atts[] = stripcslashes($m[8]);
+            }
+        }
+    } else {
+        $atts = ltrim($text);
+    }
+
+    return $atts;
+}
+
+/**
+ * Combine user attributes with known attributes.
+ *
+ * @param array $pairs Entire list of supported attributes.
+ * @param array $atts User defined attributes.
+ * @return array
+ */
+function shortcode_atts($pairs, $atts)
+{
+    $atts = (array) $atts;
+    $out = array();
+
+    foreach ($pairs as $name => $default) {
+        if (array_key_exists($name, $atts)) {
+            $out[$name] = $atts[$name];
+        } else {
+            $out[$name] = $default;
+        }
+    }
+
+    return $out;
+}
+
+/**
+ * Remove all shortcode tags from given content.
+ *
+ * @param string $content
+ * @return string
+ */
+function strip_shortcodes($content)
+{
+    $shortcode_tags = Helix::getShortcodes();
+
+    if (empty($shortcode_tags) || !is_array($shortcode_tags)) {
+        return $content;
+    }
+
+    $pattern = get_shortcode_regex();
+
+    return preg_replace_callback(
+        "/$pattern/s",
+        'strip_shortcode_tag',
+        $content
+    );
+}
+
+/**
+ * Remove shortcode tag.
+ *
+ * @param array $m
+ * @return string
+ */
+function strip_shortcode_tag($m)
+{
+    // Allow [[foo]] syntax for escaping a tag.
+    if ($m[1] == '[' && $m[6] == ']') {
+        return substr($m[0], 1, -1);
+    }
+
+    return $m[1] . $m[6];
+}
+
+/**
+ * Don't auto-p wrap shortcodes that stand alone.
+ *
+ * @param string $pee
+ * @return string
+ */
+function shortcode_unautop($pee)
+{
+    $shortcode_tags = Helix::getShortcodes();
+
+    if (empty($shortcode_tags) || !is_array($shortcode_tags)) {
+        return $pee;
+    }
+
+    $tagregexp = join(
+        '|',
+        array_map(
+            'preg_quote',
+            array_keys($shortcode_tags)
+        )
+    );
+
+    if (empty($tagregexp)) {
+        return $pee;
+    }
+
+    $pattern =
+        '/'
+        . '<p>'
+        . '\\s*+'
+        . '('
+        .     '\\['
+        .     "($tagregexp)"
+        .     '(?![\\w-])'
+        .     '[^\\]\\/]*'
+        .     '(?:'
+        .         '\\/(?!\\])'
+        .         '[^\\]\\/]*'
+        .     ')*?'
+        .     '(?:'
+        .         '\\/\\]'
+        .     '|'
+        .         '\\]'
+        .         '(?:'
+        .             '[^\\[]*+'
+        .             '(?:'
+        .                 '\\[(?!\\/\\2\\])'
+        .                 '[^\\[]*+'
+        .             ')*+'
+        .             '\\[\\/\\2\\]'
+        .         ')?'
+        .     ')'
+        . ')'
+        . '\\s*+'
+        . '<\\/p>'
+        . '/s';
+
+    return preg_replace(
+        $pattern,
+        '$1',
+        $pee
+    );
+}
+```

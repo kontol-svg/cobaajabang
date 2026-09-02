@@ -1542,17 +1542,17 @@ $this->compileProp($subProp, $mixin, $out);
 
 	// inject array of unparsed strings into environment as variables
 	protected function injectVariables($args) {
-		$this->pushEnv();
-		$parser = new helixv2_lessc_parser($this, __METHOD__);
-		foreach ($args as $name => $strValue) {
-			if ($name{0} != '@') $name = '@'.$name;
-			$parser->count = 0;
-			$parser->buffer = (string)$strValue;
-			if (!$parser->propertyValue($value)) {
-				throw new Exception("failed to parse passed in variable $name: $strValue");
-			}
+    $this->pushEnv();
+    $parser = new helixv2_lessc_parser($this, __METHOD__);
+    foreach ($args as $name => $strValue) {
+        if ($name[0] != '@') $name = '@'.$name;
+        $parser->count = 0;
+        $parser->buffer = (string)$strValue;
+        if (!$parser->propertyValue($value)) {
+            throw new Exception("failed to parse passed in variable $name: $strValue");
+        }
 
-			$this->set($name, $value);
+        $this->set($name, $value);
 		}
 	}
 

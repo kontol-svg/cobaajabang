@@ -118,10 +118,8 @@
     * @uses $helix->shortcode_tags
     */
     function remove_all_shortcodes() {
-        global $helix;
-
-        $helix->shortcode_tags = array();
-    }
+    Helix::removeAllShortcodes();
+}
 
     /**
     * Search content for shortcodes and filter shortcodes through their hooks.

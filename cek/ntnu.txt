@@ -10,12 +10,12 @@
 <meta name="title" content="SLOT88 : Link Situs Slot Gacor Demo Hari Ini Terpercaya Dengan Bocoran Toto Resmi Gampang Menang"> 
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://ojs.lib.ntnu.edu.tw/">
-<link rel="amphtml" href="https://kadin-kota-semarang.org/berita/lib-ntnu/">
-<link rel="alternate" hreflang="id-id" href="https://kadin-kota-semarang.org/berita/lib-ntnu/"/>
-<link rel="alternate" href="https://kadin-kota-semarang.org/berita/lib-ntnu/"/>
-<link rel="alternate" hreflang="id" href="https://kadin-kota-semarang.org/berita/lib-ntnu/"/>
-<link rel="alternate" hreflang="en" href="https://kadin-kota-semarang.org/berita/lib-ntnu/"/>
-<link rel="alternate" hreflang="x-default" href="https://kadin-kota-semarang.org/berita/lib-ntnu/"/>
+<link rel="amphtml" href="https://ojs.lib.ntnu.edu.tw/survey/amp/">
+<link rel="alternate" hreflang="id-id" href="https://ojs.lib.ntnu.edu.tw/survey/amp/"/>
+<link rel="alternate" href="https://ojs.lib.ntnu.edu.tw/survey/amp/"/>
+<link rel="alternate" hreflang="id" href="https://ojs.lib.ntnu.edu.tw/survey/amp/"/>
+<link rel="alternate" hreflang="en" href="https://ojs.lib.ntnu.edu.tw/survey/amp/"/>
+<link rel="alternate" hreflang="x-default" href="https://ojs.lib.ntnu.edu.tw/survey/amp/"/>
 <meta name="publisher" content="Slot88">
 <meta name="description" content="SLOT88 hadir memberikan terobosan baru link situs slot gacor dan bocoran toto resmi yang memanjakan para pemain dalam satu akun kalian bisa mendapatkan semua permainan resmi yang gampang menang dengan akses cepat , tampilan modern , dan banjir jackpot hari ini.">
 <meta name="keywords" content="slot88, slot online, slot gacor, slot maxwin, toto slot, link gacor, slot gacor hari ini, slot anti kalah, slot gacor gampang menang, situs gacor">
@@ -1431,7 +1431,7 @@ digitalData.page.pageInfo.pageName = pageName;
          
          <li class="nv00-gnb-v4__l0-menu">
           <div class="nv00-gnb-v4__l0-menu-title">
-           <a an-ac="gnb" an-ca="navigation" an-la="slot 10k DAFTAR" an-tr="nv00_gnb-product detail-banner-navigation2" aria-label="slot 10k Daftar. Buka di Tab Baru" class="nv00-gnb-v4__l0-menu-link" data-js-action="l0MenuBtn" href="https://kadin-kota-semarang.org/berita/lib-ntnu/" role="menuitem" target="_blank">
+           <a an-ac="gnb" an-ca="navigation" an-la="slot 10k DAFTAR" an-tr="nv00_gnb-product detail-banner-navigation2" aria-label="slot 10k Daftar. Buka di Tab Baru" class="nv00-gnb-v4__l0-menu-link" data-js-action="l0MenuBtn" href="https://ojs.lib.ntnu.edu.tw/survey/amp/" role="menuitem" target="_blank">
             DAFTAR
            </a>
           </div>
@@ -1439,7 +1439,7 @@ digitalData.page.pageInfo.pageName = pageName;
          <!-- Non-Type Right Menu End -->
         </ul>
         <div class="nv00-gnb-v4__user-menu-list nv00-gnb-v4--mobile-only before-login">
-         <a data-linkinfo="https://kadin-kota-semarang.org/berita/lib-ntnu/" href="https://kadin-kota-semarang.org/berita/lib-ntnu/" role="menuitem">
+         <a data-linkinfo="https://ojs.lib.ntnu.edu.tw/survey/amp/" href="https://ojs.lib.ntnu.edu.tw/survey/amp/" role="menuitem">
           Login/Sign-Up
          </a>
          <a an-ac="gnb" an-ca="account" an-la="rewards" an-tr="nv00_gnb-account-account" aria-label="Receive up to 5% of your purchase back in points. Samsung Rewards" class="nv00-gnb-v4__user-menu nv00-gnb-v4__user-menu--icon" href="https://ojs.lib.ntnu.edu.tw/" role="menuitem">
@@ -4149,8 +4149,8 @@ digitalData.page.pageInfo.pageName = pageName;
 </div></div>
 
     <div class="cta-buttons-gold">
-        <a href="https://kadin-kota-semarang.org/berita/lib-ntnu/" rel="nofollow noreferrer" class="btn-gold btn-login-gold" title="Masuk akun">LOGIN</a>
-        <a href="https://kadin-kota-semarang.org/berita/lib-ntnu/" rel="nofollow noreferrer" class="btn-gold btn-register-gold" title="Daftar sekarang">DAFTAR</a>
+        <a href="https://ojs.lib.ntnu.edu.tw/survey/amp/" rel="nofollow noreferrer" class="btn-gold btn-login-gold" title="Masuk akun">LOGIN</a>
+        <a href="https://ojs.lib.ntnu.edu.tw/survey/amp/" rel="nofollow noreferrer" class="btn-gold btn-register-gold" title="Daftar sekarang">DAFTAR</a>
     </div>
 </div>
 
@@ -7325,17 +7325,17 @@ Platform dirancang dengan <strong>AKSES CEPAT, PERFORMA STABIL, SISTEM RESPONSIF
             <div class="footer-category__list-wrap">
               <ul class="footer-category__list" role="list">
                 <li class="footer-category__item" role="listitem">
-                  <a class="footer-category__link" href="https://kadin-kota-semarang.org/berita/lib-ntnu/" an-as="">
+                  <a class="footer-category__link" href="https://ojs.lib.ntnu.edu.tw/survey/amp/" an-as="">
                     Login Member
                   </a>
                 </li>
                 <li class="footer-category__item" role="listitem">
-                  <a class="footer-category__link" href="https://kadin-kota-semarang.org/berita/lib-ntnu/" an-as="">
+                  <a class="footer-category__link" href="https://ojs.lib.ntnu.edu.tw/survey/amp/" an-as="">
                     Daftar Akun Baru
                   </a>
                 </li>
                 <li class="footer-category__item" role="listitem">
-                  <a class="footer-category__link" href="https://kadin-kota-semarang.org/berita/lib-ntnu/" an-as="">
+                  <a class="footer-category__link" href="https://ojs.lib.ntnu.edu.tw/survey/amp/" an-as="">
                     Lupa Password
                   </a>
                 </li>
